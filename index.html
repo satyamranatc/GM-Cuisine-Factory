@@ -1,4 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head"><title>GM Cuisine Factory | Luxury Pure Vegetarian Catering & Royal Banquets</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -416,7 +417,7 @@
          }
 
      </script>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" /> 
@@ -1180,35 +1181,37 @@ strong, b {
 
 /* Footer Menu CSS Starts */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 450px;
-    margin: 0 auto;
-    width: 100%;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: 450px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     text-align: center;
-    z-index: 99999;
-    box-sizing: border-box;
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-    pointer-events: auto;
+    z-index: 999999 !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
 }
 
 .footer-menu {
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12), 0 -1px 3px rgba(166, 124, 30, 0.2);
     width: 100%;
     height: auto;
-    padding: 0px;
+    padding: 0px 0px env(safe-area-inset-bottom, 0px) 0px;
     margin: 0;
     list-style-type: none;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-top: 1px solid rgba(166, 124, 30, 0.25);
+    border-bottom: none;
     border-radius: 14px 14px 0 0;
     display: flex;
+    box-sizing: border-box;
 }
 
 .footer-menu li {
@@ -1978,6 +1981,7 @@ document.getElementById("form1").addEventListener("submit", function(e) {
     window.open(whatsappURL, "_blank");
 });
 </script>
+</div>
 
 <!-- create your digital card -->
         <div id="refernearnsection" class="section-container scroll-reveal">
@@ -2124,9 +2128,7 @@ document.getElementById("form1").addEventListener("submit", function(e) {
 <script src="css/star-rating.js"></script>
         
         <script src="css/script.js"></script>
-    <div id="fb-root" class=" fb_reset">
-        <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
-        </div>
+    <div id="fb-root"></div>
     <!-- Sticky Bottom Navigation Bar -->
     <div class="footer" role="navigation" aria-label="Bottom Navigation">
         <ul class="footer-menu">
@@ -2168,7 +2170,6 @@ document.getElementById("form1").addEventListener("submit", function(e) {
             </li>
         </ul>
     </div>
-    </form>
 
     <!-- Luxury Micro-Interactions & Animation Orchestrator -->
     <script>
