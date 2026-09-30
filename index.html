@@ -1185,12 +1185,14 @@ strong, b {
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    z-index: 1000;
+    z-index: 99999;
     box-sizing: border-box;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    pointer-events: auto;
 }
 
 .footer-menu {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 251, 251, 0.1) inset;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12), 0 -1px 3px rgba(166, 124, 30, 0.2);
     width: 100%;
     height: auto;
     padding: 0px;
@@ -1198,45 +1200,58 @@ strong, b {
     list-style-type: none;
     overflow: auto;
     position: relative;
-    background: white;
-    /* border-radius: 20px 20px 0 0; */
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(166, 124, 30, 0.25);
+    border-radius: 14px 14px 0 0;
     display: flex;
-
-    background-image: linear-gradient(to right, white, white), linear-gradient(to right, white, white), linear-gradient(to right, rgba(0, 0, 20, .50), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 20, .50), rgba(255, 255, 255, 0));
-    /* Shadows */
-    /* Shadow covers */
-    background-position: left center, right center, left center, right center;
-    background-repeat: no-repeat;
-    background-color: white;
-    background-size: 20px 100%, 20px 100%, 20px 100%, 20px 100%;
-    background-attachment: local, local, scroll, scroll;
 }
 
 .footer-menu li {
     flex: 1;
-    min-width: 68px;
+    min-width: 60px;
 }
 
 .footer-menu .footer-menu-link {
     display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 8px 4px;
+    padding: 9px 2px 7px;
     box-sizing: border-box;
-    color: #555555;
+    color: #55504a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .footer-menu .footer-menu-icon {
-    font-size: 20px;
-    margin-bottom: 6px;
+    font-size: 18px;
+    margin-bottom: 4px;
     color: var(--theme-color);
+    display: block;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .footer-menu .footer-menu-text {
-    font-size: 10px;
-    font-weight: 500;
+    font-size: 9.5px;
+    font-weight: 600;
     white-space: nowrap;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
+    font-family: 'Uniform Medium', 'Roboto', sans-serif;
+    color: #443e37;
+    transition: color 0.2s ease;
+}
+
+.footer-menu .footer-menu-link:hover .footer-menu-icon,
+.footer-menu .footer-menu-link:active .footer-menu-icon {
+    color: #846318;
+    transform: scale(1.12);
+}
+
+.footer-menu .footer-menu-link:hover .footer-menu-text,
+.footer-menu .footer-menu-link:active .footer-menu-text {
+    color: #846318;
 }
 
 /* Footer Menu CSS Completed */
@@ -1981,49 +1996,7 @@ document.getElementById("form1").addEventListener("submit", function(e) {
             </div>
             <div class="corner-bottom"></div>
         </div>
-    <!-- Footer Menu -->
-    <div class="footer">
-        <ul class="footer-menu">
-            <li>
-                <a href="#homesection" id="HomeUrl" class="footer-menu-link">
-                    <i class="footer-menu-icon fas fa-home"></i>
-                    <div class="footer-menu-text">HOME</div>
-                </a>
-            </li>
-            <li>
-                <a href="#AboutUsSection" id="AboutUsUrl" class="footer-menu-link">
-                    <i class="footer-menu-icon fas fa-briefcase"></i>
-                    <div class="footer-menu-text">ABOUT US</div>
-                </a>
-            </li>
-            <li>
-                <a href="#ProductsServicesSection" id="ProductUrl" class="footer-menu-link">
-                    <i class="footer-menu-icon fas fa-box-open"></i>
-                    <div class="footer-menu-text">PRODUCTS</div>
-                </a>
-            </li>
-            <li>
-                <a href="#PaymentOptionsSection" id="PaymentUrl" class="footer-menu-link">
-                    <i class="footer-menu-icon fas fa-money-bill-alt"></i>
-                    <div class="footer-menu-text">PAYMENT</div>
-                </a>
-            </li>
 
-            <li>
-                <a href="#feedbacksection" id="FeedbackUrl" class="footer-menu-link">
-                    <i class="footer-menu-icon fas fa-star"></i>
-                    <div class="footer-menu-text">FEEDBACK</div>
-                </a>
-            </li>
-            <li>
-                <a href="#enquirysection" id="EnquiryUrl" class="footer-menu-link">
-                    <i class="footer-menu-icon fas fa-comment-alt"></i>
-                    <div class="footer-menu-text">ENQUIRY</div>
-                </a>
-            </li>
-           
-        </ul>
-    </div>
     <!-- The image Modal -->
     <div id="imageModal" class="modal">
         <span class="close" id="imageModalClose">×</span>
@@ -2151,6 +2124,46 @@ document.getElementById("form1").addEventListener("submit", function(e) {
     <div id="fb-root" class=" fb_reset">
         <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
         </div>
+    <!-- Sticky Bottom Navigation Bar -->
+    <div class="footer" role="navigation" aria-label="Bottom Navigation">
+        <ul class="footer-menu">
+            <li>
+                <a href="#homesection" id="HomeUrl" class="footer-menu-link">
+                    <i class="footer-menu-icon fas fa-home"></i>
+                    <div class="footer-menu-text">HOME</div>
+                </a>
+            </li>
+            <li>
+                <a href="#AboutUsSection" id="AboutUsUrl" class="footer-menu-link">
+                    <i class="footer-menu-icon fas fa-briefcase"></i>
+                    <div class="footer-menu-text">ABOUT US</div>
+                </a>
+            </li>
+            <li>
+                <a href="#ProductsServicesSection" id="ProductUrl" class="footer-menu-link">
+                    <i class="footer-menu-icon fas fa-box-open"></i>
+                    <div class="footer-menu-text">SERVICES</div>
+                </a>
+            </li>
+            <li>
+                <a href="#PaymentOptionsSection" id="PaymentUrl" class="footer-menu-link">
+                    <i class="footer-menu-icon fas fa-money-bill-alt"></i>
+                    <div class="footer-menu-text">PAYMENT</div>
+                </a>
+            </li>
+            <li>
+                <a href="#feedbacksection" id="FeedbackUrl" class="footer-menu-link">
+                    <i class="footer-menu-icon fas fa-star"></i>
+                    <div class="footer-menu-text">FEEDBACK</div>
+                </a>
+            </li>
+            <li>
+                <a href="#enquirysection" id="EnquiryUrl" class="footer-menu-link">
+                    <i class="footer-menu-icon fas fa-comment-alt"></i>
+                    <div class="footer-menu-text">ENQUIRY</div>
+                </a>
+            </li>
+        </ul>
     </div>
     </form>
 
