@@ -202,21 +202,24 @@
             animation: curtainReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         .curtain-crest-ring {
-            width: 96px;
-            height: 96px;
+            width: 104px;
+            height: 104px;
             margin: 0 auto 16px;
             border-radius: 50%;
-            border: 1.5px solid rgba(197, 155, 39, 0.6);
-            padding: 4px;
-            box-shadow: 0 0 28px rgba(166, 124, 30, 0.35);
+            border: 1.5px solid rgba(197, 155, 39, 0.65);
+            padding: 8px;
+            box-shadow: 0 0 32px rgba(166, 124, 30, 0.45);
             background: #141210;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .curtain-logo {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
         }
         .curtain-title {
             font-size: 19px;
@@ -450,7 +453,7 @@
             });
         </script>
     
-<meta property="og:image" content="images/gm_cuisine_factory_logo.png" />
+<meta property="og:image" content="images/gm_logo_full.png" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="GM Cuisine Factory — Award-winning luxury pure vegetarian catering for royal weddings, grand banquets, live paan lounges, Indori chaat &amp; elite celebrations in Indore. Call +91 9399231772." />
 <style type="text/css">
@@ -1581,7 +1584,7 @@ strong, b {
     <div id="brandCurtain" class="brand-curtain" aria-hidden="true">
         <div class="brand-curtain-content">
             <div class="curtain-crest-ring">
-                <img src="images/gm_crest_square_oled.png" alt="GM Cuisine Factory Crest" class="curtain-logo" />
+                <img src="images/gm_crest_diamond.png" alt="GM Cuisine Factory Crest" class="curtain-logo" />
             </div>
             <div class="curtain-title">GM CUISINE FACTORY</div>
             <div class="curtain-subtitle">Luxury Pure Veg Catering · Indore</div>
@@ -1597,7 +1600,7 @@ strong, b {
         <!-- <div class="views-label"><i class="fas fa-eye"></i>Views: <b><span id="llbvisit">226</span></b></div> -->
         <div class="upper">
             <!-- User Profile Pic -->
-            <img src="images/gm_cuisine_factory_logo.png" id="ProfileImage" class="profile-pic-img" alt="GM Cuisine Factory" />
+            <img src="images/gm_logo_full.png" id="ProfileImage" class="profile-pic-img" alt="GM Cuisine Factory" />
             <input type="hidden" name="cardid" id="cardid" value="gm-catering" />
             <input type="hidden" name="emailId" id="emailId" value="gmcuisinefactory@gmail.com" />
             <!-- User Company Name -->
@@ -1988,7 +1991,7 @@ document.getElementById("form1").addEventListener("submit", function(e) {
             <div id="sliderFrame">
         <div id="slifder" class="Adimg">
          <div class='image-wrapper'>
-                    <img onclick='openImageModal(this)' alt='GM Cuisine Factory Luxury Catering' src='images/gm_cuisine_factory_logo.png' style='width:100%; max-width:100%; display:block; padding:10px; background:#fff; border-radius:4px; box-sizing:border-box;'>
+                    <img onclick='openImageModal(this)' alt='GM Cuisine Factory Luxury Catering' src='images/gm_logo_full.png' style='width:100%; max-width:320px; margin:0 auto; display:block; padding:10px; background:#fff; border-radius:6px; box-sizing:border-box;'>
                     <a href="https://wa.me/919399231772?text=Hello%20GM%20Cuisine%20Factory%2C%20I%20want%20to%20reserve%20a%20catering%20date%20for%20my%20event." id="btnBookWhatsApp" target="_blank" class="buttonstyle" style="display:block; text-align:center; width:100%; box-sizing:border-box; text-decoration:none; margin-top:12px;">Book Catering on WhatsApp</a>
                   </div>
        </div>
