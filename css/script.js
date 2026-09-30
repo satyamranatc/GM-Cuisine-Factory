@@ -96,12 +96,13 @@ if (MobileNo.length < 10) {
 }
 if(MobileNo.length == 10)
 {
-    e.href = `https://wa.me/91${MobileNo}?text=${window.location.href}`;
+    e.href = `https://wa.me/91${MobileNo}?text=${encodeURIComponent(window.location.href)}`;
 }
 if(MobileNo.length == 12)
 {
-    //e.href = `https://wa.me/${document.getElementById('whatsapp-input').value}?text=${window.location.href}`;
-    e.href = `https://wa.me/${MobileNo}?text=${window.location.href}`;
+    e.href = `https://wa.me/${MobileNo}?text=${encodeURIComponent(window.location.href)}`;
+}
+}
 
 function handleCustomWhatsappShare() {
     const inputElem = document.getElementById('whatsapp-input');
