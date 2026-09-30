@@ -116,13 +116,13 @@ function handleCustomWhatsappShare() {
     if (mobile.length === 10) {
         mobile = '91' + mobile;
     }
-    const message = encodeURIComponent('Please check GM Service Catering (GM Cuisine Factory) digital card: ' + window.location.href);
+    const message = encodeURIComponent('Please check GM Cuisine Factory digital card: ' + window.location.href);
     window.open(`https://wa.me/${mobile}?text=${message}`, '_blank');
 }
 
 
 function handleDirectWhatsappShare(e) {
-    e.href = `whatsapp://send?text=${encodeURIComponent("Please check GM Service Catering digital card: " + window.location.href)}`;
+    e.href = `whatsapp://send?text=${encodeURIComponent("Please check GM Cuisine Factory digital card: " + window.location.href)}`;
 }
 
 
