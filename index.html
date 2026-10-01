@@ -346,13 +346,13 @@
             transform: translateY(0);
         }
 
-        /* 5. Food & Banquet Image Motion */
+        /* 5. Food & Banquet Image Motion & Glassmorphic Overlays */
         .card-img-container {
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 14px;
             background: #141210;
-            border: 1px solid rgba(197, 155, 39, 0.25);
+            border: 1px solid rgba(197, 155, 39, 0.3);
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
             position: relative;
             cursor: pointer;
@@ -367,6 +367,67 @@
         }
         .card:hover .card-img-container img {
             transform: scale(1.04);
+        }
+        .card-img-container .img-glass-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(18, 15, 12, 0.82);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(223, 186, 115, 0.65);
+            color: #fdf3d6;
+            padding: 5px 11px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            pointer-events: none;
+            z-index: 2;
+            transition: all 0.25s ease;
+        }
+        .card:hover .card-img-container .img-glass-badge {
+            border-color: #f5d77f;
+            background: rgba(18, 15, 12, 0.92);
+        }
+        .card-img-container .img-overlay-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 28px 12px 9px;
+            background: linear-gradient(180deg, transparent 0%, rgba(12, 10, 8, 0.9) 100%);
+            color: #ffffff;
+            pointer-events: none;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 8px;
+        }
+        .card-img-container .img-overlay-caption .caption-text {
+            color: #f7eed8;
+            font-size: 11.5px;
+            font-weight: 500;
+            line-height: 1.35;
+            font-family: 'Uniform Medium', 'Roboto', sans-serif;
+            letter-spacing: 0.2px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+            text-align: left;
+        }
+        .card-img-container .img-overlay-caption .zoom-hint {
+            font-size: 10px;
+            color: #dfba73;
+            white-space: nowrap;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
         }
 
         /* 6. High-end Micro-Interactions */
@@ -1961,7 +2022,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Royal Gourmet Dinner &amp; Handcrafted Feasts</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-crown" style="color:#dfba73;"></i> Royal Spread · Pure Veg</span>
                           <img onclick='openImageModal(this)' alt='Royal Gourmet Dinner & Handcrafted Feasts' src="images/royal_gourmet_feast.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Candlelit Royal Spread · Artisanal Gravies</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Bespoke multi-course royal dinner spreads featuring artisanal paneer specialities, rich creamy gravies, slow-simmered dal makhani, candlelit table ambiance, and authentic Indori appetizers prepared under strict pure vegetarian &amp; Jain sanctity.</p>
@@ -1975,7 +2041,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Grand Royal Wedding Banquets</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-ring" style="color:#dfba73;"></i> Grand Wedding Banquets</span>
                           <img onclick='openImageModal(this)' alt='Grand Royal Wedding Banquets' src="images/regal_live_tawa_counter.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Hammered Brass Chafers · 300 to 3,000+ Guests</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Opulent palace banquet setups featuring master executive chefs in high chef toques, ornate hammered brass &amp; copper chafing dishes, red velvet drapes, and fresh rose garland accents crafted for India's grandest wedding celebrations (300 to 3,000+ guests).</p>
@@ -1989,7 +2060,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>100-Foot Grand Palace Buffet Line</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-star" style="color:#dfba73;"></i> 100-Ft Open Lawn Showcase</span>
                           <img onclick='openImageModal(this)' alt='100-Foot Grand Palace Buffet Line' src="images/grand_100ft_banquet_line.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Illuminated Grand Buffet Line · Continuous Counter</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Breathtaking continuous banquet counters spanning across vast open lawns with warm under-counter illumination, liveried culinary attendants, and panoramic selections of Indian, Continental, and regional delicacies.</p>
@@ -2003,7 +2079,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Royal Victorian Carriage Buffet</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-gem" style="color:#dfba73;"></i> Victorian Golden Carriage</span>
                           <img onclick='openImageModal(this)' alt='Royal Victorian Carriage Buffet' src="images/victorian_carriage_buffet.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>White & Gold Antique Carriage · Floral Accents</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Signature antique white &amp; gold Victorian carriage banquet displays accented with lush cascading floral runners, live hot chafers, and golden tableware for prestigious outdoor wedding banquets.</p>
@@ -2017,7 +2098,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Luxury Palace Indoor Banquets</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-landmark" style="color:#dfba73;"></i> Palace Indoor Ballroom</span>
                           <img onclick='openImageModal(this)' alt='Luxury Palace Indoor Banquets' src="images/grand_palace_indoor_banquet.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Velvet Tufted Counters · Ambient Spotlights</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Opulent indoor ballroom dining featuring warm velvet tufted counters, golden mirror frames, ambient spotlighting, and fine bone china dinnerware for elite anniversary galas and VIP receptions.</p>
@@ -2031,7 +2117,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Artisanal Live Pasta &amp; Continental Lounge</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-utensils" style="color:#dfba73;"></i> Live Italian Pasta Lounge</span>
                           <img onclick='openImageModal(this)' alt='Artisanal Live Pasta & Continental Lounge' src="images/artisanal_live_pasta_station.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Theatrical Live Tossing · Gourmet Sizzling Sauces</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Theatrical live Italian station featuring customized handcrafted pastas tossed before your guests, rich sizzling sauces, fresh garden herbs, ornate canopied kiosks, and gold amphora displays.</p>
@@ -2045,7 +2136,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Colonnade Palace Archway Buffet Line</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-archway" style="color:#dfba73;"></i> Roman Colonnade Theme</span>
                           <img onclick='openImageModal(this)' alt='Colonnade Palace Archway Buffet Line' src="images/colonnade_archway_buffet.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Classical Pillars & Crystal Lantern Chandeliers</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Classical illuminated Greek &amp; Roman colonnade archway counters with crystal lantern chandeliers, ornate warm under-counter lighting, and gleaming golden chafing dish presentations.</p>
@@ -2059,7 +2155,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Royal Dessert, Mocktail &amp; Canapé Island</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-cocktail" style="color:#dfba73;"></i> Dessert & Mocktail Island</span>
                           <img onclick='openImageModal(this)' alt='Royal Dessert, Mocktail & Canapé Island' src="images/royal_dessert_canape_island.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Tiered Wooden Pastry Towers & Craft Mocktails</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Multi-tiered handcrafted wooden islands presenting artisanal miniature desserts, fresh fruit preserves, layered canapés, craft mocktail shots, and exquisite Indian sweet confections.</p>
@@ -2073,7 +2174,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Luminous Glass &amp; Botanical Buffet</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-leaf" style="color:#dfba73;"></i> Botanical Glass Lounge</span>
                           <img onclick='openImageModal(this)' alt='Luminous Glass & Botanical Buffet' src="images/luminous_glass_buffet.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Fluted Glass Counters & Lush Lawn Foliage</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Modern illuminated fluted banquet counters with botanical fern foliage, crystal accents, and architectural under-lighting arranged seamlessly on lush manicured lawns.</p>
@@ -2087,7 +2193,12 @@ strong, b {
                       <div class='card scroll-reveal'>
                         <h3 class='card-title'>Impeccably Curated Live Culinary Stations</h3>
                         <div class='card-img-container'>
+                          <span class='img-glass-badge'><i class="fas fa-fire" style="color:#dfba73;"></i> Live Sizzling Tawa Station</span>
                           <img onclick='openImageModal(this)' alt='Impeccably Curated Live Culinary Stations' src="images/curated_culinary_station.jpeg">
+                          <div class='img-overlay-caption'>
+                            <span class='caption-text'>Fresh Tawa Delicacies · Overhead Warm Heat Lamps</span>
+                            <span class='zoom-hint'><i class="fas fa-search-plus"></i> View</span>
+                          </div>
                         </div>
                         <div class='product-description'>
                           <p>Overhead warm heat lamps, artisanal fresh doughs, sizzling tawa delicacies, and pure vegetarian chef-crafted delicacies served piping hot for an effortless dining experience.</p>
