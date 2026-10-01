@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 
 
@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
     <link href="css/style.css" rel="stylesheet" />
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+
     <style>
         *,
         *::before,
@@ -561,21 +560,7 @@
         }
     </style>
 
-    <script type="text/javascript">
 
-        function SendEnq() {
-            alert("Before SendEnq");
-            sendEnquiry(this, $("#emailId").val())
-            alert("After SendEnq")
-        };
-
-        function sendFee() {
-            alert("Before sendFeedback")
-            sendFeedback(this, $("#cardid").val())
-            alert("After sendFeedback")
-        }
-
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -634,35 +619,17 @@
             --theme-frame: #141210;
         }
 
-        @font-face {
-            font-family: "Uniform Light";
-            src: url("../template2/fonts/Uniform\ Light.ttf");
-        }
+        
 
-        @font-face {
-            font-family: "Uniform";
-            src: url("../template2/fonts/Uniform.ttf");
-        }
+        
 
-        @font-face {
-            font-family: "Uniform Medium";
-            src: url("../template2/fonts/Uniform\ Medium.ttf");
-        }
+        
 
-        @font-face {
-            font-family: "Uniform Black";
-            src: url("../template2/fonts/Uniform\ Black.ttf");
-        }
+        
 
-        @font-face {
-            font-family: "Uniform Bold";
-            src: url("../template2/fonts/Uniform\ Bold.ttf");
-        }
+        
 
-        @font-face {
-            font-family: "Uniform Ultra";
-            src: url("../template2/fonts/Uniform\ Ultra.ttf");
-        }
+        
 
         html {
             scroll-behavior: smooth;
@@ -777,13 +744,7 @@
             margin: 4px 0 0;
         }
 
-        /* .curve {
-    background-image: url(./curve.svg);
-    background-position: center top;
-    background-size: 150px 16px;
-    background-repeat: repeat-x;
-    height: 14px;
-} */
+
 
         .lower {
             /* background-color: var(--theme-color); */
@@ -1922,34 +1883,7 @@
 
 
 
-        body {
-            --theme-color: #141210;
-            --theme-color-light: #fdfaf3;
-            --theme-color-dark1: #1a1714;
-            --theme-color-dark2: #221e1a;
-            --theme-color-dark3: #2a2520;
-            --theme-frame: #141210;
-        }
 
-        .brand-call {
-            color: #4CAF50 !important;
-        }
-
-        .brand-whatsapp {
-            color: #25D366 !important;
-        }
-
-        .brand-location {
-            color: #EA4335 !important;
-        }
-
-        .brand-instagram {
-            color: #E1306C !important;
-        }
-
-        .brand-facebook {
-            color: #1877F2 !important;
-        }
     </style>
 </head>
 
@@ -1958,14 +1892,14 @@
     <div id="brandCurtain" class="brand-curtain" style="display:none !important;" aria-hidden="true">
         <div class="brand-curtain-content">
             <div class="curtain-crest-ring">
-                <img src="images/gm_crest_diamond.png" alt="GM Cuisine Factory Crest" class="curtain-logo" />
+                <img fetchpriority="high" src="images/gm_crest_diamond.png" alt="GM Cuisine Factory Crest" class="curtain-logo" />
             </div>
             <div class="curtain-title">GM CUISINE FACTORY</div>
             <div class="curtain-subtitle">Luxury Pure Veg Catering · Indore</div>
             <div class="curtain-shimmer-line"></div>
         </div>
     </div>
-    <!--<form method="post" action="" id="form1">-->
+    
 
     <input type="hidden" name="themeColor" id="themeColor" value="#141210" />
     <input type="hidden" name="themeColor1" id="themeColor1" value="#fdfaf3" />
@@ -1974,11 +1908,11 @@
         <!-- <div class="views-label"><i class="fas fa-eye"></i>Views: <b><span id="llbvisit">226</span></b></div> -->
         <div class="upper">
             <!-- User Profile Pic -->
-            <img src="images/gm_logo_full.png" id="ProfileImage" class="profile-pic-img" alt="GM Cuisine Factory" />
+            <img fetchpriority="high" src="images/gm_logo_full.png" id="ProfileImage" class="profile-pic-img" alt="GM Cuisine Factory" />
             <input type="hidden" name="cardid" id="cardid" value="gm-catering" />
             <input type="hidden" name="emailId" id="emailId" value="gmcuisinefactory@gmail.com" />
             <!-- User Company Name -->
-            <div class="firmname" style="display:none;"><span id="llbCompanyNameTop">GM Cuisine Factory</span></div>
+            <h1 class="firmname" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;"><span id="llbCompanyNameTop">GM Cuisine Factory | Luxury Catering & Royal Banquets Indore</span></h1>
             <div id="div1"
                 style="width:35%;height:2px;margin:4px auto 12px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);">
             </div>
@@ -2230,7 +2164,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-crown" style="color:#dfba73;"></i> Royal Spread ·
                         Pure Veg</span>
-                    <img onclick='openImageModal(this)' alt='Royal Gourmet Dinner & Handcrafted Feasts'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Royal Gourmet Dinner & Handcrafted Feasts'
                         src="images/royal_gourmet_feast.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Candlelit Royal Spread · Artisanal Gravies</span>
@@ -2255,7 +2189,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-ring" style="color:#dfba73;"></i> Grand Wedding
                         Banquets</span>
-                    <img onclick='openImageModal(this)' alt='Grand Royal Wedding Banquets'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Grand Royal Wedding Banquets'
                         src="images/regal_live_tawa_counter.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Hammered Brass Chafers · 300 to 3,000+ Guests</span>
@@ -2280,7 +2214,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-star" style="color:#dfba73;"></i> 100-Ft Open Lawn
                         Showcase</span>
-                    <img onclick='openImageModal(this)' alt='100-Foot Grand Palace Buffet Line'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='100-Foot Grand Palace Buffet Line'
                         src="images/grand_100ft_banquet_line.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Illuminated Grand Buffet Line · Continuous Counter</span>
@@ -2305,7 +2239,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-gem" style="color:#dfba73;"></i> Victorian Golden
                         Carriage</span>
-                    <img onclick='openImageModal(this)' alt='Royal Victorian Carriage Buffet'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Royal Victorian Carriage Buffet'
                         src="images/victorian_carriage_buffet.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>White & Gold Antique Carriage · Floral Accents</span>
@@ -2330,7 +2264,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-landmark" style="color:#dfba73;"></i> Palace Indoor
                         Ballroom</span>
-                    <img onclick='openImageModal(this)' alt='Luxury Palace Indoor Banquets'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Luxury Palace Indoor Banquets'
                         src="images/grand_palace_indoor_banquet.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Velvet Tufted Counters · Ambient Spotlights</span>
@@ -2355,7 +2289,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-utensils" style="color:#dfba73;"></i> Live Italian
                         Pasta Lounge</span>
-                    <img onclick='openImageModal(this)' alt='Artisanal Live Pasta & Continental Lounge'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Artisanal Live Pasta & Continental Lounge'
                         src="images/artisanal_live_pasta_station.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Theatrical Live Tossing · Gourmet Sizzling Sauces</span>
@@ -2380,7 +2314,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-archway" style="color:#dfba73;"></i> Roman Colonnade
                         Theme</span>
-                    <img onclick='openImageModal(this)' alt='Colonnade Palace Archway Buffet Line'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Colonnade Palace Archway Buffet Line'
                         src="images/colonnade_archway_buffet.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Classical Pillars & Crystal Lantern Chandeliers</span>
@@ -2405,7 +2339,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-cocktail" style="color:#dfba73;"></i> Dessert &
                         Mocktail Island</span>
-                    <img onclick='openImageModal(this)' alt='Royal Dessert, Mocktail & Canapé Island'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Royal Dessert, Mocktail & Canapé Island'
                         src="images/royal_dessert_canape_island.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Tiered Wooden Pastry Towers & Craft Mocktails</span>
@@ -2429,7 +2363,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-leaf" style="color:#dfba73;"></i> Botanical Glass
                         Lounge</span>
-                    <img onclick='openImageModal(this)' alt='Luminous Glass & Botanical Buffet'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Luminous Glass & Botanical Buffet'
                         src="images/luminous_glass_buffet.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Fluted Glass Counters & Lush Lawn Foliage</span>
@@ -2453,7 +2387,7 @@
                 <div class='card-img-container'>
                     <span class='img-glass-badge'><i class="fas fa-fire" style="color:#dfba73;"></i> Live Sizzling Tawa
                         Station</span>
-                    <img onclick='openImageModal(this)' alt='Impeccably Curated Live Culinary Stations'
+                    <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='Impeccably Curated Live Culinary Stations'
                         src="images/curated_culinary_station.jpeg">
                     <div class='img-overlay-caption'>
                         <span class='caption-text'>Fresh Tawa Delicacies · Overhead Warm Heat Lamps</span>
@@ -2528,7 +2462,7 @@
         <h3 id="h3Qr" style="position: relative; z-index: 2;">Official PhonePe / UPI QR Code:</h3>
         <div id="QRGroup" style="position: relative; z-index: 2; margin-bottom: 10px;">
             <div>
-                <img onclick='openImageModal(this)'
+                <img loading="lazy" decoding="async" onclick='openImageModal(this)'
                     alt='PhonePe Official UPI QR (9399231772@ybl) - SHIVAM KUMAWAT (GM Cuisine Factory)'
                     src='images/phonepe_payment_qr.jpg'
                     style='width:100%; max-width:320px; margin:0 auto; display:block; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);'
@@ -2547,7 +2481,7 @@
             <tr>
                 <td class="table-row-label">
                     <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D"
-                        id="gmbimage" target="_blank"><img src="images/gmb.png" alt="Google Review"
+                        id="gmbimage" target="_blank"><img loading="lazy" decoding="async" src="images/gmb.png" alt="Google Review"
                             style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block;" /></a>
                 </td>
                 <td class="table-row-value">
@@ -2559,7 +2493,7 @@
                 <td class="table-row-label">
                     <a href="https://www.justdial.com/Indore/GM-service-catering/0731PX731-X731-241208154150-I9E8_BZDET"
                         id="justdialImage" target="_blank">
-                        <img src="images/Justdial.jpg" alt="Justdial Rating"
+                        <img loading="lazy" decoding="async" src="images/Justdial.jpg" alt="Justdial Rating"
                             style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block;" />
                     </a>
                 </td>
@@ -2571,7 +2505,7 @@
             <tr id="trInstagram">
                 <td class="table-row-label">
                     <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr"
-                        id="Instagramimage" target="_blank"><img src="images/Instagram.png" alt="Instagram Follow"
+                        id="Instagramimage" target="_blank"><img loading="lazy" decoding="async" src="images/Instagram.png" alt="Instagram Follow"
                             style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block;" /></a>
                 </td>
                 <td class="table-row-value">
@@ -2591,17 +2525,17 @@
             style="width:25%;height:2px;margin:0 auto 20px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);">
         </div>
         <form id="form1" style="position: relative; z-index: 2; margin-bottom: 25px;">
-            <input name="co_name" type="text" id="txtGuestName" class="inputtext" placeholder="Enter Full Name"
+            <input name="co_name" type="text" id="txtGuestName" class="inputtext" placeholder="Enter Full Name" aria-label="Full Name" autocomplete="name"
                 required />
             <br>
             <div class="flex">
                 <div class="enquiry-phoneNumber">
-                    <input name="co_num" type="text" id="txtGuestphoneNumber" class="inputtext"
-                        placeholder="Enter Phone Number" required />
+                    <input name="co_num" type="tel" id="txtGuestphoneNumber" class="inputtext"
+                        placeholder="Enter Phone Number" aria-label="Phone Number" autocomplete="tel" required />
                     <br>
                 </div>
                 <div class="enquiry-email">
-                    <input name="co_email" type="email" id="txtGuestEmailId" class="inputtext" placeholder="Enter Email"
+                    <input name="co_email" type="email" id="txtGuestEmailId" class="inputtext" placeholder="Enter Email" aria-label="Email Address" autocomplete="email"
                         required />
                     <br>
                 </div>
@@ -2644,7 +2578,7 @@
             <div id="sliderFrame">
                 <div id="slifder" class="Adimg">
                     <div class='image-wrapper'>
-                        <img onclick='openImageModal(this)' alt='GM Cuisine Factory Luxury Catering'
+                        <img loading="lazy" decoding="async" onclick='openImageModal(this)' alt='GM Cuisine Factory Luxury Catering'
                             src='images/gm_logo_full.png'
                             style='width:100%; max-width:320px; margin:0 auto; display:block; padding:10px; background:#fff; border-radius:6px; box-sizing:border-box;'>
                         <a href="https://wa.me/919399231772?text=Hello%20GM%20Cuisine%20Factory%2C%20I%20want%20to%20reserve%20a%20catering%20date%20for%20my%20event."
@@ -2674,7 +2608,7 @@
     <!-- The image Modal -->
     <div id="imageModal" class="modal">
         <span class="close" id="imageModalClose">×</span>
-        <img class="modal-content fadeIn" id="img01">
+        <img loading="lazy" decoding="async" class="modal-content fadeIn" id="img01">
         <div id="caption"></div>
     </div>
     <!-- The share Modal -->
@@ -2687,7 +2621,7 @@
             <div class="share-form-buttons-container">
                 <p>Share my Digital vCard in your network.</p>
                 <div class="share-buttons-heading">
-                    <img src="css/tild-arrow.svg" alt="" class="share-buttons-arrow" />
+                    <img loading="lazy" decoding="async" src="css/tild-arrow.svg" alt="" class="share-buttons-arrow" />
                     <div class="share-buttons-heading-text">Share my Digital vCard</div>
                 </div>
                 <ul class="share-buttons">
@@ -2732,7 +2666,7 @@
     </div>
 
     <script src="css/script.js"></script>
-    <div id="fb-root"></div>
+    
     <!-- Sticky Bottom Navigation Bar -->
     <div class="footer" role="navigation" aria-label="Bottom Navigation">
         <ul class="footer-menu">
