@@ -1597,13 +1597,42 @@
 
         .footer-menu .footer-menu-link:hover .footer-menu-icon,
         .footer-menu .footer-menu-link:active .footer-menu-icon {
-            color: #cba46b;
+            color: #b8860b;
             transform: scale(1.12);
         }
 
         .footer-menu .footer-menu-link:hover .footer-menu-text,
         .footer-menu .footer-menu-link:active .footer-menu-text {
-            color: #cba46b;
+            color: #b8860b;
+        }
+
+        /* Active Navigation Tab Highlighting */
+        .footer-menu .footer-menu-link.active {
+            position: relative;
+        }
+
+        .footer-menu .footer-menu-link.active .footer-menu-icon {
+            color: #C6982B !important;
+            transform: scale(1.18);
+            filter: drop-shadow(0 2px 6px rgba(198, 152, 43, 0.45));
+        }
+
+        .footer-menu .footer-menu-link.active .footer-menu-text {
+            color: #9E741D !important;
+            font-weight: 700;
+        }
+
+        .footer-menu .footer-menu-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 3px;
+            background: linear-gradient(90deg, #9E741D, #D4AF37, #9E741D);
+            border-radius: 3px;
+            box-shadow: 0 1px 4px rgba(198, 152, 43, 0.5);
         }
 
         /* Footer Menu CSS Completed */
@@ -2885,6 +2914,50 @@
                     revealElements.forEach(el => el.classList.add('revealed'));
                 }
             }
+
+            // 4. Active Tab Navigation Scroll Spy
+            const navLinks = document.querySelectorAll('.footer-menu .footer-menu-link');
+            const sections = [
+                document.getElementById('homesection'),
+                document.getElementById('AboutUsSection'),
+                document.getElementById('ProductsServicesSection'),
+                document.getElementById('PaymentOptionsSection'),
+                document.getElementById('feedbacksection'),
+                document.getElementById('enquirysection')
+            ].filter(Boolean);
+
+            function updateActiveNav() {
+                const scrollPos = window.scrollY + 180;
+                let activeId = 'homesection';
+
+                for (let i = 0; i < sections.length; i++) {
+                    const sec = sections[i];
+                    const top = sec.offsetTop;
+                    const height = sec.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        activeId = sec.id;
+                    }
+                }
+
+                // If scrolled to bottom of document, activate enquiry
+                if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+                    activeId = 'enquirysection';
+                }
+
+                navLinks.forEach(link => {
+                    const targetHash = link.getAttribute('href') || '';
+                    if (targetHash === '#' + activeId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveNav, { passive: true });
+            window.addEventListener('resize', updateActiveNav, { passive: true });
+            updateActiveNav();
+
         })();
     </script>
 </body>
