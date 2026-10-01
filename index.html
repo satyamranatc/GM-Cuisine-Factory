@@ -657,10 +657,11 @@
 
         html {
             scroll-behavior: smooth;
-            background-color: #f7f5f0;
-            background-image: url('images/luxury_ornamental_pattern.jpg');
+            background-color: #F8F5EE;
+            background-image: url('images/royal_damask_pattern.png');
             background-repeat: repeat;
-            background-size: 340px 340px;
+            background-size: 320px auto;
+            background-attachment: fixed;
         }
 
         body {
@@ -668,15 +669,16 @@
             margin: 0 auto;
             color: #4a443e;
             text-decoration: none;
-            max-width: 450px;
+            max-width: 480px;
             text-align: center;
             padding-bottom: 90px;
             overflow-x: hidden;
-            background-color: #fcfbf8;
-            background-image: linear-gradient(rgba(252, 251, 248, 0.94), rgba(252, 251, 248, 0.94)), url('images/luxury_ornamental_pattern.jpg');
+            background-color: transparent;
+            background-image: url('images/royal_damask_pattern.png');
             background-repeat: repeat;
-            background-size: auto, 340px 340px;
-            box-shadow: 0 0 35px rgba(100, 75, 30, 0.12); border: 1.5px solid rgba(198, 152, 43, 0.4); border-radius: 12px; overflow: hidden;
+            background-size: 320px auto;
+            background-attachment: fixed;
+            position: relative;
         }
 
         a {
@@ -690,16 +692,16 @@
         }
 
         .corner {
-    width: 80px;
-    height: 80px;
+    width: 68px;
+    height: 68px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
     pointer-events: none;
     border: none;
-    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 45%, rgba(184, 134, 11, 0) 46%);
-    filter: drop-shadow(0 2px 4px rgba(100, 75, 30, 0.12));
+    border-top-left-radius: 14px;
+    background: linear-gradient(135deg, #D4AF37 0%, #C6982B 42%, rgba(198, 152, 43, 0) 44%);
 }
 
 .corner::before {
@@ -707,24 +709,25 @@
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 62px;
-    height: 62px;
-    border-top: 1.5px solid rgba(255, 248, 230, 0.75);
-    border-left: 1.5px solid rgba(255, 248, 230, 0.75);
+    width: 48px;
+    height: 48px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-top-left-radius: 10px;
     pointer-events: none;
 }
 
 .corner-bottom {
-    width: 80px;
-    height: 80px;
+    width: 68px;
+    height: 68px;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 3;
     pointer-events: none;
     border: none;
-    background: linear-gradient(315deg, #D4AF37 0%, #B8860B 45%, rgba(184, 134, 11, 0) 46%);
-    filter: drop-shadow(0 -2px 4px rgba(100, 75, 30, 0.12));
+    border-bottom-right-radius: 14px;
+    background: linear-gradient(315deg, #D4AF37 0%, #C6982B 42%, rgba(198, 152, 43, 0) 44%);
 }
 
 .corner-bottom::before {
@@ -732,10 +735,11 @@
     position: absolute;
     bottom: 4px;
     right: 4px;
-    width: 62px;
-    height: 62px;
-    border-bottom: 1.5px solid rgba(255, 248, 230, 0.75);
-    border-right: 1.5px solid rgba(255, 248, 230, 0.75);
+    width: 48px;
+    height: 48px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-bottom-right-radius: 10px;
     pointer-events: none;
 }.upper {
             display: flex;
@@ -1101,17 +1105,13 @@
         /* Section CSS Starts */
         .page-wrapper {
             background: #ffffff;
-            border-left: 7px solid #cba46b;
-            border-right: 7px solid #cba46b;
-            box-shadow:
-                inset 1.5px 0 0 0 #ddbe90,
-                inset -1.5px 0 0 0 #ddbe90,
-                -1px 0 0 0 #8e6328,
-                1px 0 0 0 #8e6328,
-                0 8px 30px rgba(13, 9, 2, 0.08);
+            border: 1.5px solid rgba(198, 152, 43, 0.35);
+            box-shadow: 0 16px 44px rgba(100, 75, 30, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
             position: relative;
-            border-radius: 8px;
+            border-radius: 16px;
             overflow: hidden;
+            margin-top: 14px;
+            margin-bottom: 24px;
         }
 
         .section-header {
@@ -1129,21 +1129,19 @@
         }
 
         .section-container {
-            text-align: left;
-            padding: 26px 20px 36px;
-            margin-top: 24px;
-            line-height: 22px;
-            font-size: 14px;
-            position: relative;
-            background: #ffffff;
-            word-break: break-word;
-            border: 1px solid rgba(198, 152, 43, 0.32);
-            border-left: 4px solid #C6982B;
-            border-right: 4px solid #C6982B;
-            border-radius: 12px;
-            box-shadow: 0 10px 32px rgba(100, 75, 30, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-            overflow: hidden;
-        }
+    text-align: left;
+    padding: 26px 20px 36px;
+    margin-top: 24px;
+    line-height: 22px;
+    font-size: 14px;
+    position: relative;
+    background: #ffffff;
+    word-break: break-word;
+    border: 1.5px solid rgba(198, 152, 43, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(100, 75, 30, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
 
         /* Section CSS Completed */
 
@@ -1963,7 +1961,7 @@
 
 <body>
     <!-- Luxury Brand Curtain Intro -->
-    <div id="brandCurtain" class="brand-curtain" aria-hidden="true">
+    <div id="brandCurtain" class="brand-curtain" style="display:none !important;" aria-hidden="true">
         <div class="brand-curtain-content">
             <div class="curtain-crest-ring">
                 <img src="images/gm_crest_diamond.png" alt="GM Cuisine Factory Crest" class="curtain-logo" />
