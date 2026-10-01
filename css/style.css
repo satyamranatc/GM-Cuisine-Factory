@@ -1,21 +1,6 @@
-/*html {
-  height: 100%;
-  background: #ffd800;
-}
-
-body {
-  height: inherit;
-  margin: 0;
-}*/
-
-/*img {
-  display: block;
-  width: 100%;
-}*/
-
+/* GM Cuisine Factory - Base Stylesheet */
 .add-button {
-   
-  padding: 10px 2px;
+    padding: 10px 2px;
     font-size: 13px;
     color: #F1F1F1;
     margin: 5px;
@@ -23,12 +8,4 @@ body {
     flex: 1;
     border-bottom: 6px solid #37393A;
     display: inline-block;
- 
 }
-
-/*@media (orientation: landscape) {
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
-}*/

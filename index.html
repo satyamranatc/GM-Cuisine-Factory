@@ -10,13 +10,8 @@
 
 <link id="shadowsintolight" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into Light&amp;display=swap" media="all" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
-<link href="css/t5-style.css" rel="stylesheet" />
-<link href="css/star-rating.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
-
-
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
-   <!--<link id="manifestUrl" rel="manifest" href="https://my.mbgcard.com/Manifest/AlavanaThaiSpaandSalon.json" />-->
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -147,23 +142,28 @@
             width: 100%;
             box-sizing: border-box;
             text-align: center;
-            padding: 10px 8px;
-            font-size: 12.5px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 11px 16px;
+            font-size: 13px;
             margin: 0;
             white-space: nowrap;
             text-decoration: none;
-            background: linear-gradient(135deg, #b8860b 0%, #8a6314 100%);
-            color: #4a443e;
-            border: none;
-            border-radius: 4px;
-            box-shadow: 0 2px 6px rgba(138, 99, 20, 0.25);
+            background: linear-gradient(135deg, #1f1b17 0%, #12100e 100%);
+            color: #f7eed8;
+            border: 1.5px solid #cba46b;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25), 0 0 8px rgba(203, 164, 107, 0.2);
             font-family: 'Uniform Medium', 'Roboto', sans-serif;
             font-weight: 600;
             transition: all 0.25s ease;
+            box-sizing: border-box;
         }
         #feedback .buttonstyle:hover {
-            background: linear-gradient(135deg, #cba46b 0%, #8e6328 100%);
-            box-shadow: 0 4px 14px rgba(203, 164, 107, 0.4);
+            background: linear-gradient(135deg, #2c251f 0%, #181512 100%);
+            border-color: #ddbe90;
+            box-shadow: 0 5px 16px rgba(203, 164, 107, 0.4);
             color: #ffffff;
             transform: translateY(-1px);
         }
@@ -302,6 +302,8 @@
             gap: 10px;
             margin: 22px 0 10px;
             padding: 0 2px;
+            position: relative;
+            z-index: 2;
         }
         .stat-card {
             background: #ffffff;
@@ -909,18 +911,25 @@ strong, b {
 }
 
 .contact-action-container-text {
-    color: #555555;
+    color: #4a443e;
     margin-left: 10px;
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 13.5px;
+    line-height: 1.35;
+    margin-right: 8px;
     display: inline-block;
-    font-family: 'Uniform Medium';
-    word-break: break-word;
+    font-family: 'Uniform Medium', 'Roboto', sans-serif;
+    word-break: normal;
+    text-align: left;
 }
 
 .contact-action-container-text.address-text {
-    margin-top: 0;
-    margin-bottom: 0;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12.5px;
+    line-height: 1.35;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .whatsapp-input {
@@ -999,15 +1008,16 @@ strong, b {
     margin-top: 18px;
     margin-bottom: 14px;
     font-weight: 700;
-    letter-spacing: 0.8px;
-    font-size: 21px;
+    letter-spacing: 0.6px;
+    font-size: clamp(17px, 4.2vw, 21px);
     position: relative;
     z-index: 2;
+    line-height: 1.35;
 }
 .section-container {
     text-align: left;
-    padding: 24px 20px 20px;
-    margin-top: 20px;
+    padding: 24px 20px 36px;
+    margin-top: 24px;
     line-height: 22px;
     font-size: 14px;
     position: relative;
@@ -1291,43 +1301,33 @@ strong, b {
 /* Feedback form CSS Completed */
 
 /* Enquiry form CSS start */
-.enquiry-form input[type=text],select,textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    resize: vertical;
-    outline: none;
-    font-size: 14px;
-    font-family: 'Uniform', sans-serif;
-}
-.inputtext{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    resize: vertical;
-    outline: none;
-    font-size: 14px;
-    font-family: 'Uniform', sans-serif;
+.enquiry-form, #form1 {
+    position: relative;
+    z-index: 2;
 }
 
-.enquiry-form input[type=button] {
-    background-color: var(--theme-color);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 6px 0;
-    font-family: 'Uniform', sans-serif;
+.inputtext {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid rgba(203, 164, 107, 0.45);
+    background: #ffffff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    resize: vertical;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Uniform', 'Roboto', sans-serif;
+    color: #141210;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.inputtext:focus {
+    border-color: #cba46b !important;
+    box-shadow: 0 0 8px rgba(203, 164, 107, 0.35) !important;
+}
+
 .buttonstyle {
     background: linear-gradient(135deg, #1f1b17 0%, #12100e 100%);
     border: 1.5px solid #cba46b;
@@ -1341,6 +1341,7 @@ strong, b {
     letter-spacing: 0.3px;
     transition: all 0.25s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 8px rgba(203, 164, 107, 0.25);
+    box-sizing: border-box;
 }
 
 .buttonstyle:hover {
@@ -1351,18 +1352,21 @@ strong, b {
     color: #ffffff;
 }
 
-.enquiry-form input[type=button]:disabled {
-    opacity: 0.3;
+#BttnEnq {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
 }
 
-.enquiry-form .enquiry-phoneNumber {
-    flex: 1;
-    margin-right: 5px;
+.enquiry-form .flex, #enquirysection .flex {
+    display: flex;
+    gap: 10px;
 }
 
-.enquiry-form .enquiry-email {
+.enquiry-phoneNumber, .enquiry-email {
     flex: 1;
-    margin-left: 5px;
+    min-width: 0;
+    margin: 0 !important;
 }
 /* Enquiry form CSS Completed */
 
@@ -1451,21 +1455,25 @@ strong, b {
 
 /* Copyright css start */
 .copyright-wrapper {
-    color: rgba(0,0,0, 0.8);
-    background-color: #4a443e;
-    font-size: 14px;
-    line-height: 22px;
-    margin-top: 15px;
-    margin-bottom: -26px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
 }
 
 .copyright-wrapper-inner {
-    background-color: var(--theme-color-light);
-    padding: 5px;
+    background: #ffffff;
+    border: 1px solid rgba(203, 164, 107, 0.35);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: 0 4px 16px rgba(13, 9, 2, 0.05);
 }
 
 .copyright-wrapper a {
-    color:rgba(0,0,0,0.8);
+    color: var(--theme-color-gold, #cba46b);
+    text-decoration: none;
 }
 
 /* Copyright css completed */
@@ -1904,7 +1912,7 @@ strong, b {
                 </tbody>
             </table>
           <!--  whatsapp -->
-        <div style="padding: 15px;">
+        <div style="padding: 15px 15px 45px; position: relative; z-index: 2;">
                 <div class="p-30"></div>
                 <div class="whatsapp-input">
                     <div class="input-wrapper">
@@ -1930,7 +1938,7 @@ strong, b {
                 
                 <p style="color:var(--theme-color); font-weight:800; margin:18px 0 10px;">Global Social Media Link</p>
               <div class=""></div>
-                <ul class="inprofile share-buttons">
+                <ul class="inprofile share-buttons" style="position: relative; z-index: 2; margin-bottom: 8px;">
                     <li class="share-button">
                         <a href="https://www.facebook.com/share/1E3VXoYWyv/?mibextid=wwXIfr" id="facebookLink" target="_blank" title="Facebook"><i class="share-button-facebook fab fa-facebook-f"></i></a>
                     </li>
@@ -1977,19 +1985,19 @@ strong, b {
   <!-- Meaningful Milestone Statistics Grid -->
   <div class="luxury-stats-grid">
       <div class="stat-card">
-          <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+          <div class="stat-number" data-target="15" data-suffix="+">15+</div>
           <div class="stat-label">Years Culinary Heritage</div>
       </div>
       <div class="stat-card">
-          <div class="stat-number" data-target="500" data-suffix="+">0+</div>
+          <div class="stat-number" data-target="500" data-suffix="+">500+</div>
           <div class="stat-label">Royal Weddings &amp; Galas</div>
       </div>
       <div class="stat-card">
-          <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+          <div class="stat-number" data-target="100" data-suffix="%">100%</div>
           <div class="stat-label">Pure Veg &amp; Jain Sanctity</div>
       </div>
       <div class="stat-card">
-          <div class="stat-number" data-target="50" data-suffix="k+">0k+</div>
+          <div class="stat-number" data-target="50" data-suffix="k+">50k+</div>
           <div class="stat-label">Delighted Guests</div>
       </div>
   </div>
@@ -2201,64 +2209,63 @@ strong, b {
             <h2 class="section-header">Payment Options</h2>
        
                 <div id="div4" style="width:25%;height:2px;margin:0 auto 20px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);"></div>
-                <div>
-                    <table class="about-us-table">
-                        <tbody id="walletPay">
-                          <tr>
-                            <td class='table-row-label'> 
-                              <h3 class='table-row-label-text'>Beneficiary</h3>
-                              <b class='table-row-label-separator'>:</b>
-                            </td>
-                            <td></td>
-                            <td class='table-row-value'>SHIVAM KUMAWAT (GM Cuisine Factory)</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class='table-row-label'> 
-                              <h3 class='table-row-label-text'>UPI ID</h3>
-                              <b class='table-row-label-separator'>:</b>
-                            </td>
-                            <td></td>
-                            <td class='table-row-value'><a href="upi://pay?pa=9399231772@ybl&pn=SHIVAM%20KUMAWAT&cu=INR" style="color:var(--theme-color, #cba46b); font-weight:600; text-decoration:none;">9399231772@ybl</a></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class='table-row-label'> 
-                              <h3 class='table-row-label-text'>UPI Number</h3>
-                              <b class='table-row-label-separator'>:</b>
-                            </td>
-                            <td></td>
-                            <td class='table-row-value'>9399231772</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class='table-row-label'> 
-                              <h3 class='table-row-label-text'>Payment Modes</h3>
-                              <b class='table-row-label-separator'>:</b>
-                            </td>
-                            <td></td>
-                            <td class='table-row-value'>PhonePe, Google Pay, Paytm, BHIM UPI</td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                    </table>
-                    
-                    <h3 id="h3Qr">Official PhonePe / UPI QR Code:</h3>
-                    <div id="QRGroup">
-                      <div>
-                        <img onclick='openImageModal(this)' alt='PhonePe Official UPI QR (9399231772@ybl) - SHIVAM KUMAWAT (GM Cuisine Factory)' src='images/phonepe_payment_qr.jpg' style='width:100%; max-width:320px; margin:0 auto; display:block; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);' class='qr-image'>
-                      </div>
-                    </div>
+                <table class="about-us-table" style="position: relative; z-index: 2;">
+                    <tbody id="walletPay">
+                      <tr>
+                        <td class='table-row-label'> 
+                          <h3 class='table-row-label-text'>Beneficiary</h3>
+                          <b class='table-row-label-separator'>:</b>
+                        </td>
+                        <td></td>
+                        <td class='table-row-value'>SHIVAM KUMAWAT (GM Cuisine Factory)</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class='table-row-label'> 
+                          <h3 class='table-row-label-text'>UPI ID</h3>
+                          <b class='table-row-label-separator'>:</b>
+                        </td>
+                        <td></td>
+                        <td class='table-row-value'><a href="upi://pay?pa=9399231772@ybl&pn=SHIVAM%20KUMAWAT&cu=INR" style="color:var(--theme-color, #cba46b); font-weight:600; text-decoration:none;">9399231772@ybl</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class='table-row-label'> 
+                          <h3 class='table-row-label-text'>UPI Number</h3>
+                          <b class='table-row-label-separator'>:</b>
+                        </td>
+                        <td></td>
+                        <td class='table-row-value'>9399231772</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class='table-row-label'> 
+                          <h3 class='table-row-label-text'>Payment Modes</h3>
+                          <b class='table-row-label-separator'>:</b>
+                        </td>
+                        <td></td>
+                        <td class='table-row-value'>PhonePe, Google Pay, Paytm, BHIM UPI</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                </table>
+                
+                <h3 id="h3Qr" style="position: relative; z-index: 2;">Official PhonePe / UPI QR Code:</h3>
+                <div id="QRGroup" style="position: relative; z-index: 2; margin-bottom: 10px;">
+                  <div>
+                    <img onclick='openImageModal(this)' alt='PhonePe Official UPI QR (9399231772@ybl) - SHIVAM KUMAWAT (GM Cuisine Factory)' src='images/phonepe_payment_qr.jpg' style='width:100%; max-width:320px; margin:0 auto; display:block; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);' class='qr-image'>
+                  </div>
                 </div>
                 <div class="corner-bottom"></div>
             </div>
         <div id="feedbacksection" class="section-container scroll-reveal">
-                <div class="corner"></div>
-                <h2 class="section-header">Rate Us</h2>
-            <table id="feedback" class="about-us-table">
+            <div class="corner"></div>
+            <h2 class="section-header">Rate Us</h2>
+            <div id="div6" style="width:25%;height:2px;margin:0 auto 20px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);"></div>
+            <table id="feedback" class="about-us-table" style="position: relative; z-index: 2; margin-bottom: 10px;">
   <tr>
     <td class="table-row-label">
-      <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D" id="gmbimage" target="_blank"><img src="images/gmb.png" alt="Google Review"/></a>
+      <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D" id="gmbimage" target="_blank"><img src="images/gmb.png" alt="Google Review" style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block;" /></a>
     </td>
     <td class="table-row-value">
       <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="buttonstyle" id="btnreview">Review Us on Google</a>
@@ -2267,7 +2274,7 @@ strong, b {
   <tr id="trJustDial">
     <td class="table-row-label">
       <a href="https://www.justdial.com/Indore/GM-service-catering/0731PX731-X731-241208154150-I9E8_BZDET" id="justdialImage" target="_blank">
-        <img src="images/Justdial.jpg" alt="Justdial Rating"/>
+        <img src="images/Justdial.jpg" alt="Justdial Rating" style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block;" />
       </a>
     </td>
     <td class="table-row-value">
@@ -2276,29 +2283,22 @@ strong, b {
   </tr>
   <tr id="trInstagram">
     <td class="table-row-label">
-      <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr" id="Instagramimage" target="_blank"><img src="images/Instagram.png" alt="Instagram Follow"/></a>
+      <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr" id="Instagramimage" target="_blank"><img src="images/Instagram.png" alt="Instagram Follow" style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block;" /></a>
     </td>
     <td class="table-row-value">
       <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr" id="InstagramEngageUs" target="_blank" class="buttonstyle">Follow on Instagram</a>
     </td>
   </tr>
 </table>
-
-                <div id="div6" style="width:25%;height:2px;margin:0 auto 20px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);"></div>
-            
-           
-              
-
-                <div class="corner-bottom"></div>
-            
-            </div>
+            <div class="corner-bottom"></div>
+        </div>
         
         <div id="enquirysection" class="section-container scroll-reveal">
         <div class="corner"></div>
             
                 <h2 class="section-header">Quick Enquiry</h2>
                 <div id="div7" style="width:25%;height:2px;margin:0 auto 20px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);"></div>
-        <form id="form1">
+        <form id="form1" style="position: relative; z-index: 2; margin-bottom: 25px;">
     <input name="co_name" type="text" id="txtGuestName" class="inputtext" placeholder="Enter Full Name" required />
     <br>
     <div class="flex">
@@ -2314,9 +2314,8 @@ strong, b {
     <textarea name="co_mesg" rows="2" cols="20" id="txtGuestmessage" class="inputtext" placeholder="Enter Message"></textarea>
     <br>
     <input type="submit" value="Send on WhatsApp" id="BttnEnq" class="buttonstyle" />
-    <span></span>
-    <div class="corner-bottom"></div>
 </form>
+<div class="corner-bottom"></div>
 
 <script>
 document.getElementById("form1").addEventListener("submit", function(e) {
@@ -2343,19 +2342,26 @@ document.getElementById("form1").addEventListener("submit", function(e) {
             
                 <h2 class="section-header">Reserve Your Date</h2>
                 <div id="refearn" style="width:25%;height:2px;margin:0 auto 20px;background:linear-gradient(90deg, transparent 0%, #8e6328 15%, #cba46b 50%, #ddbe90 70%, #8e6328 85%, transparent 100%);"></div>
-            <span></span>
-            <div id="Div10" class="card scroll-reveal">
-        
-            <div id="sliderFrame">
-        <div id="slifder" class="Adimg">
-         <div class='image-wrapper'>
-                    <img onclick='openImageModal(this)' alt='GM Cuisine Factory Luxury Catering' src='images/gm_logo_full.png' style='width:100%; max-width:320px; margin:0 auto; display:block; padding:10px; background:#fff; border-radius:6px; box-sizing:border-box;'>
-                    <a href="https://wa.me/919399231772?text=Hello%20GM%20Cuisine%20Factory%2C%20I%20want%20to%20reserve%20a%20catering%20date%20for%20my%20event." id="btnBookWhatsApp" target="_blank" class="buttonstyle" style="display:block; text-align:center; width:100%; box-sizing:border-box; text-decoration:none; margin-top:12px;">Book Catering on WhatsApp</a>
-                  </div>
-       </div>
-    </div>
+            <div id="Div10" class="card scroll-reveal" style="margin-bottom: 25px; position: relative; z-index: 2;">
+                <div id="sliderFrame">
+                    <div id="slifder" class="Adimg">
+                        <div class='image-wrapper'>
+                            <img onclick='openImageModal(this)' alt='GM Cuisine Factory Luxury Catering' src='images/gm_logo_full.png' style='width:100%; max-width:320px; margin:0 auto; display:block; padding:10px; background:#fff; border-radius:6px; box-sizing:border-box;'>
+                            <a href="https://wa.me/919399231772?text=Hello%20GM%20Cuisine%20Factory%2C%20I%20want%20to%20reserve%20a%20catering%20date%20for%20my%20event." id="btnBookWhatsApp" target="_blank" class="buttonstyle" style="display:block; text-align:center; width:100%; box-sizing:border-box; text-decoration:none; margin-top:12px;">Book Catering on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="corner-bottom"></div>
+        </div>
+
+        <!-- Production Copyright Footer -->
+        <div class="copyright-wrapper">
+            <div class="copyright-wrapper-inner">
+                <div style="font-weight: 700; color: #141210; font-size: 15px; margin-bottom: 4px; font-family: 'Uniform Medium', 'Roboto', sans-serif;">GM Cuisine Factory</div>
+                <div style="font-size: 12px; color: #7a7065; line-height: 1.4;">Luxury Pure Vegetarian Catering &amp; Royal Event Feasts · Indore</div>
+                <div style="font-size: 11px; color: #9c9184; margin-top: 8px;">© 2026 GM Cuisine Factory. All Rights Reserved.</div>
+            </div>
         </div>
 
     <!-- The image Modal -->
@@ -2384,102 +2390,34 @@ document.getElementById("form1").addEventListener("submit", function(e) {
                         </a>
                     </li>
                     <li class="share-button">
-                        
-                        
-                        <a target="_blank" href="sms:?body=${window.location.href}">
-
+                        <a href="javascript:void(0);" onclick="window.open('sms:?body=' + encodeURIComponent('Please check GM Cuisine Factory digital card: ' + window.location.href))">
                             <i class="share-button-sms fas fa-comment-dots"></i>
                         </a>
                     </li>
                     <li class="share-button">
-
-                        
-                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                        <a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')">
                             <i class="share-button-facebook fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li class="share-button">
-                        
-                        <a target="_blank" href="https://twitter.com/intent/tweet?text=${window.location.href}" data-size="large">
+                        <a href="javascript:void(0);" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('GM Cuisine Factory | Luxury Catering: ' + window.location.href), '_blank')">
                             <i class="share-button-twitter fab fa-twitter"></i>
                         </a>
                     </li>
                     <li class="share-button">
-                        <i class="share-button-skype fab fa-skype"></i>
+                        <a href="javascript:void(0);" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank')">
+                            <i class="share-button-linkedin fab fa-linkedin-in"></i>
+                        </a>
                     </li>
                     <li class="share-button">
-                        <i class="share-button-pinterest fab fa-pinterest-p"></i>
-                    </li>
-                    <li class="share-button">
-                        <i class="share-button-linkedin fab fa-linkedin-in"></i>
-                    </li>
-                    <li class="share-button">
-                        <i class="share-button-mail fas fa-envelope"></i>
+                        <a href="javascript:void(0);" onclick="window.open('mailto:?subject=' + encodeURIComponent('GM Cuisine Factory Luxury Catering') + '&body=' + encodeURIComponent('Please check out GM Cuisine Factory: ' + window.location.href))">
+                            <i class="share-button-mail fas fa-envelope"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    
-    
-
-        <div id="ShareReferEarn" class="modal share-modal">
-        <div class="share-form fadeInUpBig">
-            <div class="share-form-header">
-                <h3 class="share-form-header-text">Share Profile</h3>
-                <span class="close" id="ShareReferEarnClose">×</span>
-            </div>
-            
-            <div class="share-form-buttons-container">
-                <p>Share my Digital vCard in your network.</p>
-                <div class="share-buttons-heading">
-                  <img src="css/tild-arrow.svg" alt="" class="share-buttons-arrow" />
-                    <div class="share-buttons-heading-text">Share my Digital vCard</div>
-                </div>
-                <ul class="share-buttons">
-                    <li class="share-button">
-                        <a href="javascript:;" onclick="handleDirectWhatsappShare(this)">
-                            <i class="share-button-whatsapp fab fa-whatsapp"></i>
-                        </a>
-                    </li>
-                    <li class="share-button">
-                        <a href="javascript:void(0);" onclick="window.open('https://wa.me/?text=' + encodeURIComponent('Please check GM Cuisine Factory digital card: ' + window.location.href), '_blank')">
-                            <i class="share-button-whatsapp fab fa-whatsapp"></i>
-                        </a>
-                    </li>
-                    <li class="share-button">
-                        <a target="_blank" href="sms:?body=${window.location.href}">
-                            <i class="share-button-sms fas fa-comment-dots"></i>
-                        </a>
-                    </li>
-                    <li class="share-button">
-                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                            <i class="share-button-facebook fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="share-button">
-                        <a target="_blank" href="https://twitter.com/intent/tweet?text=${window.location.href}" data-size="large">
-                            <i class="share-button-twitter fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="share-button">
-                        <i class="share-button-skype fab fa-skype"></i>
-                    </li>
-                    <li class="share-button">
-                        <i class="share-button-pinterest fab fa-pinterest-p"></i>
-                    </li>
-                    <li class="share-button">
-                        <i class="share-button-linkedin fab fa-linkedin-in"></i>
-                    </li>
-                    <li class="share-button">
-                        <i class="share-button-mail fas fa-envelope"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-<script src="css/star-rating.js"></script>
         
         <script src="css/script.js"></script>
     <div id="fb-root"></div>
@@ -2561,10 +2499,11 @@ document.getElementById("form1").addEventListener("submit", function(e) {
             const animateNumber = (el) => {
                 const target = parseInt(el.getAttribute('data-target'), 10);
                 const suffix = el.getAttribute('data-suffix') || '';
-                const duration = 800;
-                const startTime = performance.now();
+                const duration = 600;
+                let startTime = null;
 
                 const step = (currentTime) => {
+                    if (!startTime) startTime = currentTime;
                     const elapsed = currentTime - startTime;
                     if (elapsed >= duration) {
                         el.textContent = target + suffix;
