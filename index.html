@@ -667,25 +667,27 @@
         .corner {
     width: 0;
     height: 0;
-    border-top: 80px solid var(--theme-color-gold, #cba46b);
-    border-right: 150px solid transparent;
+    border-top: 60px solid var(--theme-color-gold, #cba46b);
+    border-right: 110px solid transparent;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
     pointer-events: none;
+    transition: border-color 0.3s ease;
 }
 
 .corner-bottom {
     width: 0;
     height: 0;
-    border-bottom: 80px solid var(--theme-color-gold, #cba46b);
-    border-left: 150px solid transparent;
+    border-bottom: 60px solid var(--theme-color-gold, #cba46b);
+    border-left: 110px solid transparent;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1;
     pointer-events: none;
+    transition: border-color 0.3s ease;
 }
 
 .upper {
@@ -1051,6 +1053,73 @@
             font-size: 13px;
         }
 
+        
+        /* Royal Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #1C1814 0%, #7D5913 50%, #C6982B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* Subtle Hero Floating Animation */
+        @keyframes subtleHeroFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        .profile-pic-img {
+            animation: subtleHeroFloat 4.5s ease-in-out infinite;
+        }
+
+        /* Ambient Glow Pulse on Primary Button */
+        @keyframes softGoldGlow {
+            0%, 100% {
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+            }
+            50% {
+                box-shadow: 0 6px 20px rgba(198, 152, 43, 0.35);
+            }
+        }
+
+        .shadow-button:hover,
+        .add-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(198, 152, 43, 0.3);
+        }
+
+        /* Card interactive micro-lift */
+        .card {
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(198, 152, 43, 0.6);
+            box-shadow: 0 12px 32px rgba(100, 75, 30, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+        }
+
+        /* Social and Quick Action Buttons micro-pop */
+        .contact-action-table tr {
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .contact-action-table tr:hover {
+            background-color: rgba(198, 152, 43, 0.06);
+        }
+
+        .share-buttons .share-button a {
+            transition: transform 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .share-buttons .share-button a:hover {
+            transform: translateY(-3px) scale(1.12);
+        }
+
         /* Section CSS Starts */
         
         #homesection {
@@ -1076,19 +1145,20 @@
             color: #141210;
             text-transform: uppercase;
             text-align: center;
-            margin-top: 32px;
+            margin-top: 48px;
             margin-bottom: 14px;
             font-weight: 700;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.8px;
             font-size: clamp(17px, 4.2vw, 21px);
             position: relative;
             z-index: 2;
-            line-height: 1.35;
+            line-height: 1.4;
+            padding: 0 10px;
         }
 
         .section-container {
     text-align: left;
-    padding: 26px 20px 36px;
+    padding: 34px 20px 36px;
     margin-top: 24px;
     line-height: 22px;
     font-size: 14px;
