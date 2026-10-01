@@ -33,7 +33,7 @@
                 border-radius: 7px;
                 width: 100%;
                 box-sizing: border-box;
-                background-color: #ffffff;
+                background-color: #4a443e;
                 transition: all 0.3s ease;
             }
 
@@ -53,7 +53,7 @@
             border: 1px solid rgba(166, 124, 30, 0.35);
             box-shadow: 0 4px 16px rgba(166, 124, 30, 0.08);
             border-radius: 7px;
-            background-color: #ffffff;
+            background-color: #4a443e;
             transition: all 0.3s ease;
         }
         .card:hover {
@@ -93,7 +93,7 @@
         .shadow-button:hover, .add-button:hover {
             background: #1a1714;
             border-bottom: 6px solid #c59b27;
-            color: #ffffff;
+            color: #4a443e;
             transform: translateY(-1px);
         }
 
@@ -153,7 +153,7 @@
             white-space: nowrap;
             text-decoration: none;
             background: linear-gradient(135deg, #b8860b 0%, #8a6314 100%);
-            color: #ffffff;
+            color: #4a443e;
             border: none;
             border-radius: 4px;
             box-shadow: 0 2px 6px rgba(138, 99, 20, 0.25);
@@ -164,7 +164,7 @@
         #feedback .buttonstyle:hover {
             background: linear-gradient(135deg, #c59b27 0%, #9e7417 100%);
             box-shadow: 0 4px 14px rgba(166, 124, 30, 0.4);
-            color: #ffffff;
+            color: #4a443e;
             transform: translateY(-1px);
         }
 
@@ -400,7 +400,11 @@
                 animation: none !important;
             }
         }
-    </style>
+    .brand-call { color: #4CAF50 !important; }
+.brand-whatsapp { color: #25D366 !important; }
+.brand-location { color: #EA4335 !important; }
+.brand-instagram { color: #E1306C !important; }
+</style>
 
      <script type="text/javascript">
 
@@ -606,7 +610,7 @@ strong, b {
 
 .lower {
     /* background-color: var(--theme-color); */
-    color: #ffffff;
+    color: #4a443e;
     /* padding: 20px; */
     margin-top: -10px;
 }
@@ -616,36 +620,96 @@ strong, b {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     width: 100%;
     margin-top: 15px;
 }
 
 .contact-button {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     padding: 0;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    box-shadow: 0 3px 8px rgba(138, 99, 20, 0.25);
-    text-align: center;
-    color: #ffffff;
-    border: 1px solid rgba(229, 197, 123, 0.45);
-    background: linear-gradient(135deg, #b8860b 0%, #8a6314 100%);
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
-    transition: all 0.25s ease;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-button:hover {
-    background: linear-gradient(135deg, #c59b27 0%, #9e7417 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 14px rgba(166, 124, 30, 0.4);
-    color: #ffffff;
+.contact-button i {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+}
+
+.contact-button:hover i {
+    transform: scale(1.12);
+}
+
+.contact-button:active {
+    transform: scale(0.92) !important;
+}
+
+/* Call Button - Authentic Green */
+.contact-button.contact-button-call,
+#hrefContact.contact-button {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%) !important;
+    box-shadow: 0 4px 14px rgba(46, 204, 113, 0.42) !important;
+}
+.contact-button.contact-button-call:hover,
+#hrefContact.contact-button:hover {
+    background: linear-gradient(135deg, #34d399 0%, #22c55e 100%) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.6) !important;
+}
+
+/* WhatsApp Button - Authentic WhatsApp Green */
+.contact-button.contact-button-whatsapp,
+#whatappShare.contact-button {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.42) !important;
+}
+.contact-button.contact-button-whatsapp:hover,
+#whatappShare.contact-button:hover {
+    background: linear-gradient(135deg, #2ee570 0%, #1da851 100%) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6) !important;
+}
+
+/* Location Button - Google Maps Red */
+.contact-button.contact-button-location,
+#gmap1.contact-button {
+    background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%) !important;
+    box-shadow: 0 4px 14px rgba(234, 67, 53, 0.42) !important;
+}
+.contact-button.contact-button-location:hover,
+#gmap1.contact-button:hover {
+    background: linear-gradient(135deg, #f85b4c 0%, #d93025 100%) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(234, 67, 53, 0.6) !important;
+}
+
+/* Instagram Button - Authentic Sunset Gradient */
+.contact-button.contact-button-instagram,
+#hyperEmail.contact-button {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    box-shadow: 0 4px 14px rgba(220, 39, 67, 0.42) !important;
+}
+.contact-button.contact-button-instagram:hover,
+#hyperEmail.contact-button:hover {
+    background: linear-gradient(45deg, #fba74c 0%, #ef7347 25%, #e63955 50%, #d83173 75%, #c82494 100%) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6) !important;
 }
 
 .trapezoid {
@@ -713,7 +777,7 @@ strong, b {
     height: 30px;
     text-align: center;
     color: var(--theme-color);
-    background-color: #ffffff;
+    background-color: #4a443e;
     font-size: 15px;
     border-radius: 50%;
     box-sizing: border-box;
@@ -972,7 +1036,7 @@ strong, b {
 
 .product-enquiry-btn {
     padding: 8px 18px;
-    color: #ffffff;
+    color: #4a443e;
     font-size: 14px;
     font-family: 'Uniform Medium', 'Roboto', sans-serif;
     font-weight: 600;
@@ -988,7 +1052,7 @@ strong, b {
     background: linear-gradient(135deg, #c59b27 0%, #9e7417 100%);
     box-shadow: 0 6px 16px rgba(166, 124, 30, 0.45);
     transform: translateY(-2px);
-    color: #ffffff;
+    color: #4a443e;
 }
 /* Product css completed */
 
@@ -1265,7 +1329,7 @@ strong, b {
 /* Copyright css start */
 .copyright-wrapper {
     color: rgba(0,0,0, 0.8);
-    background-color: #ffffff;
+    background-color: #4a443e;
     font-size: 14px;
     line-height: 22px;
     margin-top: 15px;
@@ -1472,7 +1536,7 @@ strong, b {
 }
 
 .share-button-instagram {
-    background-color: #F18644;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
 }
 
 .share-button-youtube {
@@ -1580,6 +1644,10 @@ strong, b {
 
 
  body{--theme-color:#a67c1e; --theme-color-light:#f5edd8; --theme-color-dark1:#846318; --theme-color-dark2:#634a12; --theme-color-dark3:#42310c; --theme-frame:#1f1c19;} 
+.brand-call { color: #4CAF50 !important; }
+.brand-whatsapp { color: #25D366 !important; }
+.brand-location { color: #EA4335 !important; }
+.brand-instagram { color: #E1306C !important; }
 </style>
 </head>
 <body>
@@ -1620,16 +1688,16 @@ strong, b {
        
             
             <div class="contact-buttons">
-                <a href="tel:9399231772" id="hrefContact" class="contact-button" title="Call">
+                <a href="tel:9399231772" id="hrefContact" class="contact-button contact-button-call" title="Call">
                     <i class="fas fa-phone fa-flip-horizontal"></i>
                 </a>
-                <a href="https://wa.me/919399231772?text=Hello%20GM%20Cuisine%20Factory%2C%20I%20want%20to%20reserve%20a%20date%20for%20my%20event." id="whatappShare" class="contact-button" target="_blank" title="WhatsApp">
+                <a href="https://wa.me/919399231772?text=Hello%20GM%20Cuisine%20Factory%2C%20I%20want%20to%20reserve%20a%20date%20for%20my%20event." id="whatappShare" class="contact-button contact-button-whatsapp" target="_blank" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D" id="gmap1" class="contact-button" target="_blank" title="Location">
+                <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D" id="gmap1" class="contact-button contact-button-location" target="_blank" title="Location">
                     <i class="fas fa-map-marker-alt fa-flip-horizontal"></i>
                 </a>
-                <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr" id="hyperEmail" class="contact-button" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr" id="hyperEmail" class="contact-button contact-button-instagram" target="_blank" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -1641,7 +1709,7 @@ strong, b {
                         <td>
                             <div class="trapezoid">
                                 <a href="tel:9399231772" id="HyperPhone" target="_blank" class="contact-action-container-icon">
-                                    <i class="fas fa-phone fa-flip-horizontal"></i>
+                                    <i class="fas fa-phone fa-flip-horizontal brand-call"></i>
                                 </a>
                             </div>
                         </td>
@@ -1653,7 +1721,7 @@ strong, b {
                         <td>
                             <div class="trapezoid">
                                 <a href="https://www.google.com/maps/place/GM+Cuisine+Factory/@22.7314627,75.7556346,13z/data=!4m10!1m2!2m1!1s8,+Akhand+Nagar,+Airport+Road,+Indore,+Madhya+Pradesh+452005!3m6!1s0x3962fd274d70ea0b:0x4f92477b6d976e6a!8m2!3d22.7314627!4d75.8277324!15sCjw4LCBBa2hhbmQgTmFnYXIsIEFpcnBvcnQgUm9hZCwgSW5kb3JlLCBNYWRoeWEgUHJhZGVzaCA0NTIwMDWSARBjYXRlcmluZ19zZXJ2aWNl4AEA!16s%2Fg%2F11p1b7b19q?entry=ttu&amp;g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D" id="gmap" target="_blank" class="contact-action-container-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i class="fas fa-map-marker-alt brand-location"></i>
                                 </a>
                             </div>
                         </td>
@@ -1667,7 +1735,7 @@ strong, b {
                         <td>
                             <div class="trapezoid">
                                 <a href="https://wa.me/919399231772" id="emailId1" target="_blank" class="contact-action-container-icon">
-                                    <i class="fab fa-whatsapp"></i>
+                                    <i class="fab fa-whatsapp brand-whatsapp"></i>
                                 </a>
                             </div>
                         </td>
@@ -1679,7 +1747,7 @@ strong, b {
                         <td>
                             <div class="trapezoid">
                                 <a href="https://www.instagram.com/gmcuisinefactory?stkn=bDNrbWNlYnNnanQx&utm_source=qr" id="website1" target="_blank" class="contact-action-container-icon">
-                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-instagram brand-instagram"></i>
                                 </a>
                             </div>
                         </td>
@@ -1704,7 +1772,7 @@ strong, b {
 
                     </div>
                     <a class="whatsapp-button" id="whatsappShareDirectBtn" href="javascript:void(0);" onclick="handleCustomWhatsappShare()">
-                        <i class="fab fa-whatsapp"></i>Share on Whatsapp
+                        <i class="fab fa-whatsapp brand-whatsapp"></i>Share on Whatsapp
                         </a>
                 </div>
                 <div class="p-20"></div>
