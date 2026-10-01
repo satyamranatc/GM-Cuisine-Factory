@@ -982,15 +982,20 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             text-align: center;
-            line-height: 30px;
-            color: #ffffff;
-            background-color: transparent;
+            line-height: 32px;
+            color: #b8860b;
+            background-color: #ffffff;
             font-size: 15px;
             border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             transition: transform 0.25s ease;
+        }
+
+        .contact-action-table tr:hover .contact-action-container-icon {
+            transform: scale(1.1);
         }
 
         .contact-action-table tr:nth-child(even) .trapezoid .contact-action-container-icon {
