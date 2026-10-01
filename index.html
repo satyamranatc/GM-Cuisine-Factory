@@ -937,113 +937,135 @@
 
 
         .contact-action-table {
-            line-height: 18px;
-            margin-left: -2px;
             width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            padding: 4px 16px 12px;
+            box-sizing: border-box;
+        }
+
+        .contact-action-table tr {
+            display: flex;
+            align-items: center;
+            background: #FAF7F2;
+            border: 1px solid rgba(198, 152, 43, 0.22);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 6px rgba(100, 75, 30, 0.04);
+        }
+
+        .contact-action-table tr:hover {
+            background: #FFFFFF;
+            border-color: rgba(198, 152, 43, 0.5);
+            box-shadow: 0 4px 14px rgba(100, 75, 30, 0.09);
+            transform: translateY(-1px);
         }
 
         .contact-action-table td {
             padding: 0;
             vertical-align: middle;
+            border: none;
         }
 
-        .contact-action-table tr:nth-child(even) .trapezoid {
-            border-bottom: 30px solid transparent;
-            border-right: 60px solid var(--theme-color);
-            border-top: 30px solid transparent;
-            height: 40px;
-            width: 0;
-            margin-top: -27px;
-            margin-bottom: -27px;
-            position: relative;
-            box-sizing: content-box;
+        .contact-action-table td:first-child {
+            flex-shrink: 0;
+            margin-right: 14px;
         }
 
+        .contact-action-table td:last-child {
+            flex: 1;
+            min-width: 0;
+            text-align: left;
+        }
+
+        /* Clean modern icon circle replacing the broken jagged trapezoids */
+        .trapezoid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(198, 152, 43, 0.35);
+            box-shadow: 0 3px 8px rgba(100, 75, 30, 0.08);
+            box-sizing: border-box !important;
+            margin: 0 !important;
+            flex-shrink: 0;
+        }
+
+        .contact-action-table tr:nth-child(even) .trapezoid,
         .contact-action-table tr:nth-child(odd) .trapezoid {
-            border-bottom: 30px solid transparent;
-            border-left: 60px solid var(--theme-color);
-            border-top: 30px solid transparent;
-            height: 40px;
-            width: 0;
-            position: relative;
-            box-sizing: content-box;
-        }
-
-        .contact-action-table tr:nth-child(1) .trapezoid {
-            border-left-color: #1a1714;
-        }
-
-        .contact-action-table tr:nth-child(2) .trapezoid {
-            border-right-color: #141210;
-        }
-
-        .contact-action-table tr:nth-child(3) .trapezoid {
-            border-left-color: #221e1a;
-        }
-
-        .contact-action-table tr:nth-child(4) .trapezoid {
-            border-right-color: #141210;
-        }
-
-        .contact-action-table tr:nth-child(5) .trapezoid {
-            border-left-color: #1a1714;
+            border: 1.5px solid rgba(198, 152, 43, 0.35);
+            height: 42px;
+            width: 42px;
+            margin: 0;
+            position: static;
         }
 
         .contact-action-container-icon {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 32px;
-            height: 32px;
+            width: 100%;
+            height: 100%;
             text-align: center;
-            color: #dfba73;
-            background: radial-gradient(circle at 35% 35%, #2a2520 0%, #100e0c 100%);
-            border: 1.5px solid #cba46b;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 8px rgba(203, 164, 107, 0.25);
-            font-size: 15px;
+            color: #C6982B;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            font-size: 16px;
             border-radius: 50%;
             box-sizing: border-box;
             line-height: 1;
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+            transition: all 0.2s ease;
         }
 
-        .contact-action-container-icon:hover {
-            transform: scale(1.15);
-            border-color: #f5d77f;
-            box-shadow: 0 4px 14px rgba(203, 164, 107, 0.6), inset 0 1px 3px rgba(255, 255, 255, 0.25);
-            color: #ffffff;
+        .brand-call { color: #16A34A !important; }
+        .brand-location { color: #EA4335 !important; }
+        .brand-whatsapp { color: #25D366 !important; }
+        .brand-instagram { color: #E1306C !important; }
+        .brand-facebook { color: #1877F2 !important; }
+
+        .contact-action-table tr:hover .trapezoid {
+            border-color: #C6982B;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(198, 152, 43, 0.2);
         }
 
-        .contact-action-table tr:nth-child(even) .trapezoid .contact-action-container-icon {
-            position: absolute;
-            left: 19px;
-            top: 4px;
+        .contact-action-table tr:hover .contact-action-container-icon {
+            color: #FFFFFF;
+            transform: scale(1.08);
         }
 
+        .contact-action-table tr:nth-child(even) .trapezoid .contact-action-container-icon,
         .contact-action-table tr:nth-child(odd) .trapezoid .contact-action-container-icon {
-            position: absolute;
-            left: -39px;
-            top: 4px;
+            position: static;
+            left: auto;
+            top: auto;
         }
 
         .contact-action-container-text {
-            color: #4a443e;
-            margin-left: 10px;
-            font-size: 13.5px;
-            line-height: 1.35;
-            margin-right: 8px;
-            display: inline-block;
+            color: #1C1814;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.45;
+            display: block;
             font-family: 'Uniform Medium', 'Roboto', sans-serif;
-            word-break: normal;
+            word-break: break-word;
             text-align: left;
+            text-decoration: none;
+            margin: 0;
         }
 
         .contact-action-container-text.address-text {
             display: block;
-            margin-top: 2px;
-            margin-bottom: 2px;
-            font-size: 12.5px;
-            line-height: 1.35;
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.45;
+            color: #4A443E;
             white-space: normal;
             word-break: break-word;
         }
