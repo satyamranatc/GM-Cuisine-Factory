@@ -305,22 +305,22 @@
         }
         .stat-card {
             background: #ffffff;
-            border: 1px solid rgba(11, 59, 44, 0.18);
+            border: 1px solid rgba(197, 155, 39, 0.35);
             border-radius: 8px;
             padding: 12px 6px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(11, 59, 44, 0.05);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .stat-card:hover {
             transform: translateY(-2px);
-            border-color: rgba(11, 59, 44, 0.45);
-            box-shadow: 0 6px 18px rgba(11, 59, 44, 0.12);
+            border-color: rgba(197, 155, 39, 0.7);
+            box-shadow: 0 6px 18px rgba(197, 155, 39, 0.18);
         }
         .stat-number {
             font-size: 25px;
             font-weight: 800;
-            color: #0b3b2c;
+            color: #141210;
             font-family: 'Uniform Medium', 'Roboto', sans-serif;
             line-height: 1.1;
             margin-bottom: 4px;
@@ -448,14 +448,14 @@
             }
             document.addEventListener("DOMContentLoaded", function() {
                 var themeElem = document.getElementById("themeColor");
-                var themecolor = themeElem ? themeElem.value : "#0b3b2c";
+                var themecolor = themeElem ? themeElem.value : "#141210";
                 var themeElem1 = document.getElementById("themeColor1");
-                var themeColor1 = themeElem1 ? themeElem1.value : "#f2f7f4";
+                var themeColor1 = themeElem1 ? themeElem1.value : "#fdfaf3";
                 document.documentElement.style.setProperty("--theme-color", themecolor);
                 document.documentElement.style.setProperty("--theme-color-light", themeColor1);
-                document.documentElement.style.setProperty("--theme-color-dark1", "#082f23");
-                document.documentElement.style.setProperty("--theme-color-dark2", "#06241b");
-                document.documentElement.style.setProperty("--theme-color-dark3", "#041913");
+                document.documentElement.style.setProperty("--theme-color-dark1", "#1a1714");
+                document.documentElement.style.setProperty("--theme-color-dark2", "#221e1a");
+                document.documentElement.style.setProperty("--theme-color-dark3", "#2a2520");
             });
         </script>
     
@@ -466,14 +466,14 @@
 
 
 :root {
-    --theme-color: #0b3b2c;
-    --theme-color-emerald: #0e4a37;
+    --theme-color: #141210;
+    --theme-color-charcoal: #141210;
     --theme-color-gold: #c59b27;
-    --theme-color-light: #f2f7f4;
-    --theme-color-dark1: #082f23;
-    --theme-color-dark2: #06241b;
-    --theme-color-dark3: #041913;
-    --theme-frame: #071e16;
+    --theme-color-light: #fdfaf3;
+    --theme-color-dark1: #1a1714;
+    --theme-color-dark2: #221e1a;
+    --theme-color-dark3: #2a2520;
+    --theme-frame: #141210;
 }
 @font-face {
     font-family: "Uniform Light";
@@ -536,18 +536,48 @@ strong, b {
 .corner {
     width: 0;
     height: 0;
-    border-top: 80px solid var(--theme-color);
+    border-top: 80px solid #141210;
     border-right: 150px solid transparent;
     margin-left: -15px;
+    position: relative;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.corner::after {
+    content: '';
+    position: absolute;
+    top: -82px;
+    left: 0;
+    width: 170px;
+    height: 3.5px;
+    background: linear-gradient(90deg, #f5d77f 0%, #c59b27 50%, #8a6314 85%, transparent 100%);
+    transform-origin: top left;
+    transform: rotate(28.07deg);
+    box-shadow: 0 0 5px rgba(197, 155, 39, 0.55);
 }
 
 .corner-bottom {
     width: 0;
     height: 0;
     margin-left: auto;
-    border-bottom: 80px solid var(--theme-color);
+    border-bottom: 80px solid #141210;
     border-left: 150px solid transparent;
     margin-right: -15px;
+    position: relative;
+    filter: drop-shadow(0 -2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.corner-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -82px;
+    right: 0;
+    width: 170px;
+    height: 3.5px;
+    background: linear-gradient(270deg, #f5d77f 0%, #c59b27 50%, #8a6314 85%, transparent 100%);
+    transform-origin: bottom right;
+    transform: rotate(28.07deg);
+    box-shadow: 0 0 5px rgba(197, 155, 39, 0.55);
 }
 
 .upper {
@@ -776,23 +806,23 @@ strong, b {
 }
 
 .contact-action-table tr:nth-child(1) .trapezoid {
-    border-left-color: #0e4a37;
+    border-left-color: #1a1714;
 }
 
 .contact-action-table tr:nth-child(2) .trapezoid {
-    border-right-color: #0b3b2c;
+    border-right-color: #141210;
 }
 
 .contact-action-table tr:nth-child(3) .trapezoid {
-    border-left-color: #082f23;
+    border-left-color: #221e1a;
 }
 
 .contact-action-table tr:nth-child(4) .trapezoid {
-    border-right-color: #06241b;
+    border-right-color: #141210;
 }
 
 .contact-action-table tr:nth-child(5) .trapezoid {
-    border-left-color: #0b3b2c;
+    border-left-color: #1a1714;
 }
 
 .contact-action-container-icon {
@@ -802,21 +832,22 @@ strong, b {
     width: 32px;
     height: 32px;
     text-align: center;
-    color: #ffffff;
-    background: radial-gradient(circle at 35% 35%, #0f3d2f 0%, #041710 100%);
-    border: 1.5px solid rgba(197, 155, 39, 0.7);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+    color: #dfba73;
+    background: radial-gradient(circle at 35% 35%, #2a2520 0%, #100e0c 100%);
+    border: 1.5px solid #c59b27;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 8px rgba(197, 155, 39, 0.2);
     font-size: 15px;
     border-radius: 50%;
     box-sizing: border-box;
     line-height: 1;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .contact-action-container-icon:hover {
     transform: scale(1.15);
-    border-color: #e5b842;
-    box-shadow: 0 4px 14px rgba(197, 155, 39, 0.5), inset 0 1px 3px rgba(255, 255, 255, 0.25);
+    border-color: #f5d77f;
+    box-shadow: 0 4px 14px rgba(197, 155, 39, 0.6), inset 0 1px 3px rgba(255, 255, 255, 0.25);
+    color: #ffffff;
 }
 
 .contact-action-table tr:nth-child(even) .trapezoid .contact-action-container-icon {
@@ -1071,23 +1102,22 @@ strong, b {
 
 .product-enquiry-btn {
     padding: 8px 18px;
-    color: #4a443e;
     font-size: 14px;
     font-family: 'Uniform Medium', 'Roboto', sans-serif;
     font-weight: 600;
     display: inline-block;
-    background: linear-gradient(135deg, #0e4a37 0%, #082f23 100%);
-    border: 1.5px solid rgba(197, 155, 39, 0.6);
-    color: #ffffff;
+    background: linear-gradient(135deg, #1f1b17 0%, #12100e 100%);
+    border: 1.5px solid #c59b27;
+    color: #f7eed8;
     border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(11, 59, 44, 0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25), 0 0 8px rgba(197, 155, 39, 0.2);
     transition: all 0.25s ease;
     text-decoration: none;
 }
 .product-enquiry-btn:hover {
-    background: linear-gradient(135deg, #125e46 0%, #0a3a2c 100%);
-    box-shadow: 0 6px 18px rgba(11, 59, 44, 0.45);
-    border-color: #c59b27;
+    background: linear-gradient(135deg, #2c251f 0%, #181512 100%);
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.45);
+    border-color: #f5d77f;
     transform: translateY(-2px);
     color: #ffffff;
 }
@@ -1245,9 +1275,9 @@ strong, b {
     font-family: 'Uniform', sans-serif;
 }
 .buttonstyle {
-    background: linear-gradient(135deg, #0e4a37 0%, #082f23 100%);
-    border: 1.5px solid rgba(197, 155, 39, 0.5);
-    color: white;
+    background: linear-gradient(135deg, #1f1b17 0%, #12100e 100%);
+    border: 1.5px solid #c59b27;
+    color: #f7eed8;
     padding: 12px 20px;
     border-radius: 6px;
     cursor: pointer;
@@ -1256,14 +1286,15 @@ strong, b {
     font-weight: 600;
     letter-spacing: 0.3px;
     transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(11, 59, 44, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 8px rgba(197, 155, 39, 0.2);
 }
 
 .buttonstyle:hover {
-    background: linear-gradient(135deg, #125e46 0%, #0a3a2c 100%);
-    box-shadow: 0 6px 18px rgba(11, 59, 44, 0.45);
-    border-color: rgba(197, 155, 39, 0.8);
+    background: linear-gradient(135deg, #2c251f 0%, #181512 100%);
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.45);
+    border-color: #f5d77f;
     transform: translateY(-1px);
+    color: #ffffff;
 }
 
 .enquiry-form input[type=button]:disabled {
@@ -1336,7 +1367,7 @@ strong, b {
 .footer-menu .footer-menu-icon {
     font-size: 18px;
     margin-bottom: 4px;
-    color: #0b3b2c;
+    color: #141210;
     display: block;
     transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -1685,7 +1716,7 @@ strong, b {
 
 
 
- body{--theme-color:#0b3b2c; --theme-color-light:#f2f7f4; --theme-color-dark1:#082f23; --theme-color-dark2:#06241b; --theme-color-dark3:#041913; --theme-frame:#071e16;} 
+ body{--theme-color:#141210; --theme-color-light:#fdfaf3; --theme-color-dark1:#1a1714; --theme-color-dark2:#221e1a; --theme-color-dark3:#2a2520; --theme-frame:#141210;} 
 .brand-call { color: #4CAF50 !important; }
 .brand-whatsapp { color: #25D366 !important; }
 .brand-location { color: #EA4335 !important; }
@@ -1707,8 +1738,8 @@ strong, b {
     </div>
     <!--<form method="post" action="" id="form1">-->
 
-        <input type="hidden" name="themeColor" id="themeColor" value="#0b3b2c" />
-        <input type="hidden" name="themeColor1" id="themeColor1" value="#f2f7f4" />
+        <input type="hidden" name="themeColor" id="themeColor" value="#141210" />
+        <input type="hidden" name="themeColor1" id="themeColor1" value="#fdfaf3" />
     <div id="homesection" class="page-wrapper">
         <div class="corner"></div>
         <!-- <div class="views-label"><i class="fas fa-eye"></i>Views: <b><span id="llbvisit">226</span></b></div> -->
@@ -1761,7 +1792,7 @@ strong, b {
                         </td>
                         <td>
                             <div style="display: flex; flex-direction: column; gap: 4px; padding: 4px 0;">
-                                <a href="tel:9399231772" id="hredCallContact" target="_blank" class="contact-action-container-text" title="9399231772" style="margin: 0; line-height: 1.3;">+91 93992 31772 <span style="font-size: 11px; color: #0b3b2c; font-weight: 700; background: #e6f3ee; padding: 1px 7px; border-radius: 10px; margin-left: 4px;">Primary</span></a>
+                                <a href="tel:9399231772" id="hredCallContact" target="_blank" class="contact-action-container-text" title="9399231772" style="margin: 0; line-height: 1.3;">+91 93992 31772 <span style="font-size: 11px; color: #141210; font-weight: 700; background: #fdf3d6; border: 1px solid rgba(197, 155, 39, 0.5); padding: 1px 7px; border-radius: 10px; margin-left: 4px;">Primary</span></a>
                                 <a href="tel:8817335591" id="hredCallContactAlt" target="_blank" class="contact-action-container-text" title="8817335591" style="margin: 0; line-height: 1.3;">+91 88173 35591 <span style="font-size: 11px; color: #555; font-weight: 500; background: #f0f0f0; padding: 1px 7px; border-radius: 10px; margin-left: 4px;">Alternate</span></a>
                             </div>
                         </td>
