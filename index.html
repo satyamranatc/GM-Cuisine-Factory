@@ -600,51 +600,8 @@ strong, b {
     font-family: 'Uniform Medium';
 }
 
-.corner {
-    width: 0;
-    height: 0;
-    border-top: 80px solid #141210;
-    border-right: 150px solid transparent;
-    margin-left: -15px;
-    position: relative;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
-}
-
-.corner::after {
-    content: '';
-    position: absolute;
-    top: -82px;
-    left: 0;
-    width: 170px;
-    height: 3.5px;
-    background: linear-gradient(90deg, #f5d77f 0%, #c59b27 50%, #8a6314 85%, transparent 100%);
-    transform-origin: top left;
-    transform: rotate(28.07deg);
-    box-shadow: 0 0 5px rgba(197, 155, 39, 0.55);
-}
-
-.corner-bottom {
-    width: 0;
-    height: 0;
-    margin-left: auto;
-    border-bottom: 80px solid #141210;
-    border-left: 150px solid transparent;
-    margin-right: -15px;
-    position: relative;
-    filter: drop-shadow(0 -2px 6px rgba(0, 0, 0, 0.25));
-}
-
-.corner-bottom::after {
-    content: '';
-    position: absolute;
-    bottom: -82px;
-    right: 0;
-    width: 170px;
-    height: 3.5px;
-    background: linear-gradient(270deg, #f5d77f 0%, #c59b27 50%, #8a6314 85%, transparent 100%);
-    transform-origin: bottom right;
-    transform: rotate(28.07deg);
-    box-shadow: 0 0 5px rgba(197, 155, 39, 0.55);
+.corner, .corner-bottom {
+    display: none !important;
 }
 
 .upper {
@@ -652,11 +609,9 @@ strong, b {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10%;
-    padding-bottom: 10px;
+    padding: 24px 10% 10px;
     margin: 0 auto;
     position: relative;
-    margin-top: -10px;
 }
 
 .views-label {
@@ -1000,44 +955,38 @@ strong, b {
 
 /* Section CSS Starts */
 .page-wrapper {
-    background: #fff;
-    border-left: 15px solid #1f1c19;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-left: 8px solid #c59b27;
+    border-right: 8px solid #c59b27;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.08);
     position: relative;
-    border-right: 15px solid #1f1c19;
+    border-radius: 6px;
+    overflow: hidden;
 }
 .section-header {
     color: #141210;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 18px;
+    margin-bottom: 14px;
     font-weight: 700;
     letter-spacing: 0.8px;
+    font-size: 21px;
 }
 .section-container {
     text-align: left;
-    padding: 20px;
-    padding-bottom: 0;
-    margin-top: 15px;
+    padding: 24px 20px 20px;
+    margin-top: 20px;
     line-height: 22px;
     font-size: 14px;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    /* overflow: hidden; */
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
     word-break: break-word;
-    border-left: 15px solid #1f1c19;
-    border-right: 15px solid #1f1c19;
-}
-
-.section-container .corner {
-    margin-top: -20px;
-    margin-left: -35px;
-}
-
-.section-container .corner-bottom {
-    margin-right: -35px;
+    border-left: 8px solid #c59b27;
+    border-right: 8px solid #c59b27;
+    border-radius: 6px;
+    overflow: hidden;
 }
 /* Section CSS Completed */
 
