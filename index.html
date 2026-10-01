@@ -27,15 +27,18 @@
         @media only screen and (max-width: 600px) {
             .card {
                 text-align: left;
-                border: 1px solid rgba(203, 164, 107, 0.35);
+                border: 1px solid rgba(198, 152, 43, 0.4);
                 padding: 14px;
                 max-width: 100%;
                 margin: 0 auto 20px;
-                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-                border-radius: 9px;
+                box-shadow: 0 4px 18px rgba(100, 75, 30, 0.08);
+                border-radius: 12px;
                 width: 100%;
                 box-sizing: border-box;
-                background-color: #ffffff;
+                background-color: #FAF6EE;
+                background-image: linear-gradient(rgba(254, 251, 244, 0.78), rgba(254, 251, 244, 0.78)), url('images/luxury_neoclassical_pattern.jpg');
+                background-repeat: repeat;
+                background-size: auto, 320px auto;
                 transition: all 0.3s ease;
             }
 
@@ -53,10 +56,13 @@
         }
 
         .card {
-            border: 1px solid rgba(203, 164, 107, 0.35);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            border-radius: 9px;
-            background-color: #ffffff;
+            border: 1px solid rgba(198, 152, 43, 0.4);
+            box-shadow: 0 4px 18px rgba(100, 75, 30, 0.08);
+            border-radius: 12px;
+            background-color: #FAF6EE;
+            background-image: linear-gradient(rgba(254, 251, 244, 0.78), rgba(254, 251, 244, 0.78)), url('images/luxury_neoclassical_pattern.jpg');
+            background-repeat: repeat;
+            background-size: auto, 320px auto;
             transition: all 0.3s ease;
         }
 
@@ -385,7 +391,7 @@
 
         /* 4. Smooth Scroll-Reveal Animations */
         .scroll-reveal {
-            opacity: 0;
+            opacity: 1;
             transform: translateY(22px);
             transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
@@ -657,11 +663,9 @@
 
         html {
             scroll-behavior: smooth;
-            background-color: #F8F5EE;
-            background-image: url('images/luxury_neoclassical_pattern.jpg');
-            background-repeat: repeat;
-            background-size: 320px auto;
-            background-attachment: fixed;
+            background-color: #12100E;
+            background-image: radial-gradient(circle at 50% 20%, #221c17 0%, #0d0b09 100%);
+            min-height: 100vh;
         }
 
         body {
@@ -674,10 +678,6 @@
             padding-bottom: 90px;
             overflow-x: hidden;
             background-color: transparent;
-            background-image: url('images/luxury_neoclassical_pattern.jpg');
-            background-repeat: repeat;
-            background-size: 320px auto;
-            background-attachment: fixed;
             position: relative;
         }
 
@@ -1086,9 +1086,12 @@
 
         /* Section CSS Starts */
         .page-wrapper {
-            background: #ffffff;
-            border: 1.5px solid rgba(198, 152, 43, 0.35);
-            box-shadow: 0 16px 44px rgba(100, 75, 30, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            background-color: #FAF6EE;
+            background-image: linear-gradient(rgba(254, 251, 244, 0.78), rgba(254, 251, 244, 0.78)), url('images/luxury_neoclassical_pattern.jpg');
+            background-repeat: repeat;
+            background-size: auto, 320px auto;
+            border: 1.5px solid rgba(198, 152, 43, 0.4);
+            box-shadow: 0 16px 44px rgba(100, 75, 30, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.95);
             position: relative;
             border-radius: 16px;
             overflow: hidden;
@@ -1117,11 +1120,14 @@
     line-height: 22px;
     font-size: 14px;
     position: relative;
-    background: #ffffff;
+    background-color: #FAF6EE;
+    background-image: linear-gradient(rgba(254, 251, 244, 0.78), rgba(254, 251, 244, 0.78)), url('images/luxury_neoclassical_pattern.jpg');
+    background-repeat: repeat;
+    background-size: auto, 320px auto;
     word-break: break-word;
-    border: 1.5px solid rgba(198, 152, 43, 0.35);
+    border: 1.5px solid rgba(198, 152, 43, 0.4);
     border-radius: 16px;
-    box-shadow: 0 12px 36px rgba(100, 75, 30, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 36px rgba(100, 75, 30, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95);
     overflow: hidden;
 }
 
@@ -1130,14 +1136,17 @@
         /* Card CSS Starts */
         .card {
             text-align: left;
-            background-color: #ffffff;
-            border: 1px solid rgba(203, 164, 107, 0.4);
-            padding: 16px;
+            background-color: #FAF6EE;
+            background-image: linear-gradient(rgba(254, 251, 244, 0.78), rgba(254, 251, 244, 0.78)), url('images/luxury_neoclassical_pattern.jpg');
+            background-repeat: repeat;
+            background-size: auto, 320px auto;
+            border: 1.5px solid rgba(198, 152, 43, 0.4);
+            padding: 18px;
             max-width: 100%;
             margin: 0 auto;
             margin-bottom: 24px;
-            box-shadow: 0 4px 18px rgba(13, 9, 2, 0.06), 0 0 0 1px rgba(221, 190, 144, 0.2);
-            border-radius: 10px;
+            box-shadow: 0 12px 36px rgba(100, 75, 30, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
         }
 
         .card .card-title {
