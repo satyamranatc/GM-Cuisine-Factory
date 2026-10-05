@@ -636,10 +636,12 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 24px 10% 10px;
+            padding: 24px 16px 10px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
+            width: 100%;
+            text-align: center;
         }
 
         .views-label {
@@ -657,12 +659,12 @@
         }
 
         .profile-pic-img {
-            width: 86%;
-            max-width: 250px;
+            width: 92%;
+            max-width: 330px;
             height: auto;
             border: none;
             border-radius: 0;
-            margin: 12px auto 14px;
+            margin: 14px auto 16px;
             display: block;
             background: transparent;
             padding: 0;
@@ -672,7 +674,8 @@
         }
 
         .profile-pic-img:hover {
-            transform: scale(1.03);
+            animation-play-state: paused;
+            transform: translateY(-4px) scale(1.025);
             box-shadow: none;
         }
 
