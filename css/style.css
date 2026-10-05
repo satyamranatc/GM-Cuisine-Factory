@@ -1588,7 +1588,7 @@
         .copyright-wrapper {
             text-align: center;
             margin-top: 20px;
-            margin-bottom: 8px;
+            margin-bottom: 75px;
             padding: 0 5px;
             position: relative;
             z-index: 2;
@@ -1603,8 +1603,15 @@
         }
 
         .copyright-wrapper a {
-            color: var(--theme-color-gold, #cba46b);
+            color: #9E741D;
+            font-weight: 500;
             text-decoration: none;
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+
+        .copyright-wrapper a:hover {
+            color: #735310;
+            text-decoration: underline;
         }
 
         /* Copyright css completed */
