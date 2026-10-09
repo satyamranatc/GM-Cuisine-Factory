@@ -1,0 +1,17 @@
+{
+  "name": "GM Cuisine Factory | Luxury Pure Vegetarian Catering",
+  "short_name": "GM Cuisine",
+  "description": "Award-winning luxury pure vegetarian catering & royal banquets in Indore.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141210",
+  "theme_color": "#141210",
+  "icons": [
+    {
+      "src": "images/gm_crest_square_oled.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
