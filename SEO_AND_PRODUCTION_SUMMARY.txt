@@ -1,0 +1,66 @@
+GM CUISINE FACTORY - SUMMARY OF UPDATES & SEO FIXES
+Domain: https://gmcuisinefactory.com/
+Date: October 9, 2026
+
+==================================================
+1. DOMAIN & CNAME SYNCHRONIZATION
+==================================================
+- Synced the GitHub Pages custom domain configuration with the local codebase.
+- Verified that "https://gmcuisinefactory.com/" is active with full SSL/HTTPS encryption.
+- Updated all badges and project links in README.md to point to the live custom domain.
+
+==================================================
+2. SEARCH ENGINE OPTIMIZATION (SEO) & CRAWLING
+==================================================
+- Created robots.txt:
+  Allows all search engine bots (Google, Bing, Yahoo) to crawl the website and discover the sitemap.
+  URL: https://gmcuisinefactory.com/robots.txt
+
+- Created sitemap.xml:
+  Generated a full XML sitemap with Google Image Sitemap tags for all signature banquet and buffet showcase images.
+  URL: https://gmcuisinefactory.com/sitemap.xml
+
+- Added Canonical Tag:
+  Added <link rel="canonical" href="https://gmcuisinefactory.com/" /> in index.html to ensure Google ranks the custom domain directly.
+
+- Added Meta Tags:
+  Added meta description, keyword tags, author, and indexing directives in index.html.
+
+- Added Local SEO (Indore):
+  Added geographic tags (geo.region, geo.placename "Indore", coordinates) to boost ranking on Google Maps and local Indore searches.
+
+==================================================
+3. GOOGLE RICH SNIPPETS (SCHEMA.ORG JSON-LD)
+==================================================
+- Integrated official Schema.org JSON-LD structured data for "CateringService" and "LocalBusiness".
+- Included business details:
+  * Brand: GM Cuisine Factory
+  * Address: 8, Akhand Nagar, Airport Road, Indore, MP - 452005
+  * Phone: +91 93992 31772 / +91 88173 35591
+  * Cuisine: Pure Vegetarian / Jain Friendly / Royal Indian Banquets
+  * Hours: Monday - Sunday, 09:00 - 23:00
+  * Catalog of all 10 signature services & buffet stations for Google Rich Cards.
+
+==================================================
+4. SOCIAL MEDIA SHARING (OPEN GRAPH & TWITTER)
+==================================================
+- Added complete Open Graph and Twitter Card tags.
+- When sharing the link on WhatsApp, Facebook, Instagram, LinkedIn, or iMessage, it now shows:
+  * Official Title: GM Cuisine Factory | Luxury Pure Vegetarian Catering & Royal Banquets
+  * Description of services
+  * High-resolution brand crest preview image
+
+==================================================
+5. PERFORMANCE & CORE WEB VITALS
+==================================================
+- Preloaded primary brand logo image for faster loading speed (Largest Contentful Paint).
+- Added preconnect and dns-prefetch hints for Google Fonts and FontAwesome.
+- Created site.webmanifest for mobile Progressive Web App (PWA) support.
+- Linked high-resolution square brand crest for browser favicons and Apple touch icons.
+
+==================================================
+6. ACCESSIBILITY & SECURITY
+==================================================
+- Added descriptive aria-label and title attributes to all buttons (Call, WhatsApp, Maps, Instagram, Modals) for screen readers and accessibility standards.
+- Added rel="noopener noreferrer" to external links for security.
+- ZERO changes or harm to visual design, colors, damask texture, fonts, or existing layout.
