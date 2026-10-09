@@ -3,9 +3,9 @@
 > **Award-Winning Luxury Pure Vegetarian Catering & Royal Event Feasts**  
 > *Indore, Madhya Pradesh, India*
 
-[![Website Status](https://img.shields.io/badge/Status-Live%20on%20GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://satyamranatc.github.io/GM-Cuisine-Factory/)
-[![Pure Vegetarian](https://img.shields.io/badge/Cuisine-100%25%20Pure%20Vegetarian-198754?style=for-the-badge)](https://satyamranatc.github.io/GM-Cuisine-Factory/)
-[![Platform](https://img.shields.io/badge/Stack-Vanilla%20HTML5%20%7C%20CSS3%20%7C%20ES6+-black?style=for-the-badge)](https://satyamranatc.github.io/GM-Cuisine-Factory/)
+[![Website Status](https://img.shields.io/badge/Status-Live%20on%20Custom%20Domain-2ea44f?style=for-the-badge&logo=google-chrome)](https://gmcuisinefactory.com/)
+[![Pure Vegetarian](https://img.shields.io/badge/Cuisine-100%25%20Pure%20Vegetarian-198754?style=for-the-badge)](https://gmcuisinefactory.com/)
+[![Platform](https://img.shields.io/badge/Stack-Vanilla%20HTML5%20%7C%20CSS3%20%7C%20ES6+-black?style=for-the-badge)](https://gmcuisinefactory.com/)
 
 ---
 
